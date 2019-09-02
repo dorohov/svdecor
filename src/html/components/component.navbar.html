@@ -1,0 +1,62 @@
+<div class="navbar">
+    <div class="navbar__inner container">
+        <div class="navbar__left">
+            <ul class="iconset is--left">
+                <li><button id="openSearch">@@include('component.svg.html', {"name": "search"})</button></li>
+            </ul>
+        </div>
+        <div class="navbar__search">
+            <form action="">
+                <input type="text" placeholder="Поиск по каталогу">
+                <button type="submit">@@include('component.svg.html', {"name": "search"})</button>
+            </form>
+        </div>
+        <div class="navbar__center">
+            <div class="navbar__menu">
+                <ul>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Производство</a></li>
+                </ul>
+            </div>
+            <div class="navbar__logo">
+                <a href="@@pages.index">
+                    @@include('component.svg.html', {"name": "logo"})
+                </a>
+            </div>
+            <div class="navbar__menu">
+                <ul>
+                    <li><a href="#">Студия света</a></li>
+                    <li><a href="#">О магазине</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar__right">
+            <ul class="iconset is--right">
+                <li>
+                    <button type="button" onclick="changeColor();">@@include('component.svg.html', {"name": "light"})</button>
+                    <div class="message" id="color-message" style="display: none;">
+                        <div class="message__inner">
+                            <div class="message__text">Вы можете поменять <br> цвет сайта</div>
+                            <div class="message__btn">
+                                <button onclick="closeColorMessage()">Понятно</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">@@include('component.svg.html', {"name": "basket"})</a></li>
+            </ul>
+        </div>
+        <div class="navbar__mobile">
+            <button class="hamburger hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="navbar__aside">
+    
+</div>

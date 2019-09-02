@@ -1,0 +1,30 @@
+{
+    "sitename": "SVDECOR",
+    "lang": "ru",
+    "phone": "+7 (495) 120-16-24",
+    "phone_link": "tel:84951201624",
+    "phone2": "+7 (903) 637-18-24",
+    "phone2_link": "tel:89036371824",
+    "mail": "info@svdec.ru",
+    "social": {
+        "twitter": "#",
+        "inst": "#",
+        "facebook": "#",
+        "vk": "#"
+    },
+    "pages": {
+        "index": "index.html",
+        "catalog": "catalog.html",
+        "catalog.tabs": "catalog.tabs.html",
+        "item": "item.html",
+        "basket": "basket.html",
+        "promotions": "promotions",
+        "cooperation": "cooperation.html",
+        "delivery": "delivery.html",
+        "pay": "pay.html",
+        "contacts": "contacts.html",
+        "production": "production.html",
+        "studio": "studio.html",
+        "error404": "404.html"
+    }
+}

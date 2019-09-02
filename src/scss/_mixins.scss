@@ -1,0 +1,6 @@
+@mixin col($param, $var, $color) {
+    #{$param}: $var;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        #{$param}: $color;
+    }
+}

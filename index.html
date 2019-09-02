@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная — SVDECOR</title>
+    <script>
+        var styles = {
+            dark: 'dist/css/style_dark.css',
+            white: 'dist/css/style_white.css'
+        }
+    </script>
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar__inner container">
+            <div class="navbar__left">
+                <ul class="iconset is--left">
+                    <li><button id="openSearch"><svg class="svg-search-dims svg is--search">
+                                <use xlink:href="img/svg/sprites.svg#search"></use>
+                            </svg></button></li>
+                </ul>
+            </div>
+            <div class="navbar__search">
+                <form action="">
+                    <input type="text" placeholder="Поиск по каталогу">
+                    <button type="submit"><svg class="svg-search-dims svg is--search">
+                            <use xlink:href="img/svg/sprites.svg#search"></use>
+                        </svg></button>
+                </form>
+            </div>
+            <div class="navbar__center">
+                <div class="navbar__menu">
+                    <ul>
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Производство</a></li>
+                    </ul>
+                </div>
+                <div class="navbar__logo">
+                    <a href="index.html">
+                        <svg class="svg-logo-dims svg is--logo">
+                            <use xlink:href="img/svg/sprites.svg#logo"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="navbar__menu">
+                    <ul>
+                        <li><a href="#">Студия света</a></li>
+                        <li><a href="#">О магазине</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__right">
+                <ul class="iconset is--right">
+                    <li>
+                        <button type="button" onclick="changeColor();"><svg class="svg-light-dims svg is--light">
+                                <use xlink:href="img/svg/sprites.svg#light"></use>
+                            </svg></button>
+                        <div class="message" id="color-message" style="display: none;">
+                            <div class="message__inner">
+                                <div class="message__text">Вы можете поменять <br> цвет сайта</div>
+                                <div class="message__btn">
+                                    <button onclick="closeColorMessage()">Понятно</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#"><svg class="svg-basket-dims svg is--basket">
+                                <use xlink:href="img/svg/sprites.svg#basket"></use>
+                            </svg></a></li>
+                </ul>
+            </div>
+            <div class="navbar__mobile">
+                <button class="hamburger hamburger--spin" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="navbar__aside">
+
+    </div>
+    <main>
+        <div class="banner">
+            <div class="banner__inner container">
+
+            </div>
+        </div>
+    </main>
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/svg4everybody.min.js"></script>
+    <script src="dist/js/main.js"></script>
+</body>
+
+</html>

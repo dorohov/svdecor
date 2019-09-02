@@ -1,0 +1,25 @@
+.banner {
+    @include col(background-color, var(--banner-bg), #1D2027);
+    position: relative;
+    &::after {
+        content: '';
+        @include col(background-color, var(--banner-line-bg), #262930);
+        position: absolute;
+        height: 100%;
+        right: 155px;
+        width: 36vw;
+        top: 0;
+    }
+    &__inner {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        &::after {
+            width: 50vw;
+            right: 50px;
+        }
+    }
+}
