@@ -1,5 +1,5 @@
 body {
-    background-color: var(--main-bg);
+    @include col(background-color, var(--main-bg), $main-bg);
     color: var(--text-color);
     font-family: 'Futura PT';
 }

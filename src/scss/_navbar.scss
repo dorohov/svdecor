@@ -3,7 +3,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 99999;
     &.is--search {
         .navbar {
             &__search {
@@ -35,7 +35,7 @@
                 width: 100%;
                 padding: 15px 50px 15px 0;
                 border: none;
-                border-bottom: 1px solid var(--text-color);
+                @include colBorder(border-bottom, 1px, solid, var(--text-color), $text-color);
                 background: var(--banner-bg);
                 color: var(--text-color);
                 font-size: 16px;
@@ -144,19 +144,124 @@
             }
             .hamburger-inner {
                 margin-top: 0;
+                &::after {
+                    bottom: -7px;
+                }
+                &::before {
+                    top: -7px;
+                }
             }
+        }
+        .hamburger--spin.is-active .hamburger-inner::before {
+            top: 0;
+        }
+        .hamburger--spin.is-active .hamburger-inner::after {
+            bottom: 0;
         }
     }
     &__aside {
         position: fixed;
-        width: 200vw;
-        background: red;
+        width: 300vh;
+        background: var(--main-bg);
         height: 100vh;
-        left: 0;
+        right: 0;
         top: 0;
-        z-index: 9999999999999999;
-        transition: .5s all ease;
-        transform: rotate(-90deg) translate(-50vw, 150vh);
+        z-index: 9999;
+        transition: .9s transform cubic-bezier(.99,.01,0,1);
+        transform: rotate(-90deg);
+        transform-style: preserve-3D;
+        transform-origin: top right;
+        justify-content: flex-end;
+        display: none;
+        &.is--open {
+            transform: rotate(0);
+        }
+        &__inner {
+            width: 100vw;
+            padding-top: 120px;
+            padding-left: 30px;
+            color: var(--text-color);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            .is--ml {
+                transform: translateY(15px);
+                transition: .7s all ease;
+                transition-delay: .5s;
+                opacity: 0;
+                &.is--moved {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+        &__menu {
+            width: 100%;
+            ul {
+                li {
+                    a {
+                        font-size: 18px;
+                        display: block;
+                        padding: 16px 0;
+                        color: var(--text-color);
+                    }
+                }
+            }
+        }
+        &__btns {
+            width: 100%;
+            margin-top: auto;
+            padding-bottom: 10vh;
+            position: relative;
+            padding-right: 30px;
+            ul {
+                display: flex;
+                align-items: center;
+                li {
+                    button,
+                    a {
+                        cursor: pointer;
+                        padding: 0;
+                        background: transparent;
+                        border: none;
+                    }
+                    margin-right: 25px;
+                    svg {
+                        fill: var(--text-color);
+                    }
+                }
+            }
+            &__search {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                max-width: calc(100% - 30px);
+                visibility: hidden;
+                opacity: 0;
+                transition: .25s all ease;
+                &.is--open {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                form {
+                    input[type="text"] {
+                        width: 100%;
+                        box-sizing: border-box;
+                        max-width: 100%;
+                        padding: 15px 0;
+                        border: none;
+                        @include colBorder(border-bottom, 1px, solid, var(--text-color), $text-color);
+                        background: var(--main-bg);
+                        color: var(--text-color);
+                        font-size: 16px;
+                        &::placeholder {
+                            color: var(--text-color);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -182,7 +287,8 @@
     .navbar {
         &__left,
         &__menu,
-        &__right {
+        &__right,
+        &__search {
             display: none;
         }
         &__inner {
@@ -198,6 +304,9 @@
         }
         &__mobile {
             display: block;
+        }
+        &__aside {
+            display: flex;
         }
     }
 }

@@ -1,5 +1,60 @@
 <div class="banner">
-    <div class="banner__inner container">
-        
+    <div class="banner__inner">
+        <div class="banner__content container">
+            <div class="banner__content__list">
+                @@include('index.banner.slider-item.html', {
+                    "image": "banner.png",
+                    "company": "SV Decor",
+                    "title": "Наши светильники <br> можно красить!",
+                    "desc": "Интернет магазин декоративных светильников <br> в Москве, Санкт-Петербурге и РФ",
+                    "link": "#",
+                    "list_name": "Гипсовый светильник <br> SV 7702",
+                    "list_price": "7 500",
+                    "id": "1"
+                })
+                @@include('index.banner.slider-item.html', {
+                    "image": "banner2.png",
+                    "company": "SV Decor",
+                    "title": "Наши светильники <br> можно красить!",
+                    "desc": "Интернет магазин декоративных светильников <br> в Москве, Санкт-Петербурге и РФ",
+                    "link": "#",
+                    "list_name": "Гипсовый светильник <br> SV 7702",
+                    "list_price": "7 500",
+                    "id": "2"
+                })
+            </div>
+        </div>
+        <div class="banner__footer is--c-pl">
+            <div class="banner__footer__inner">
+                <div class="banner__footer__social">
+                    @@include('../components/component.social.html', {
+                        "align": "left"
+                    })
+                </div>
+                <div class="banner__footer__list">
+                    <ul>
+                        
+                    </ul>
+                </div>
+                <div class="banner__footer__next">
+                    <a href="#" class="banner__footer__next__block">
+                        <div class="banner__footer__next__block__inner">
+                            <div class="banner__footer__next__block__icon">
+                                @@include('../components/component.svg.html', {"name": "next"})
+                            </div>
+                            <div class="banner__footer__next__block__label">Вперед</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="banner__footer__scroll">
+                    <button class="banner__footer__scroll__inner">
+                        <div class="banner__footer__scroll__line">
+                            <span></span>
+                        </div>
+                        <div class="banner__footer__scroll__text">scroll</div>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

@@ -58,5 +58,36 @@
     </div>
 </div>
 <div class="navbar__aside">
-    
+    <div class="navbar__aside__inner">
+        <div class="navbar__aside__menu">
+            <ul>
+                <li class="is--ml"><a href="#">Каталог</a></li>
+                <li class="is--ml"><a href="#">Акции</a></li>
+                <li class="is--ml"><a href="#">Производство</a></li>
+                <li class="is--ml"><a href="#">Студия света</a></li>
+                <li class="is--ml"><a href="#">О магазине</a></li>
+                <li class="is--ml"><a href="#">Конаткты</a></li>
+            </ul>
+        </div>
+        <div class="navbar__aside__btns">
+            <ul>
+                <li class="is--ml">
+                    <button id="openMobileSearch">@@include('component.svg.html', {"name": "search"})</button>
+                </li>
+                <li class="is--ml">
+                    <button type="button" onclick="changeColor();">@@include('component.svg.html', {"name": "light"})</button>
+                </li>
+                <li class="is--ml">
+                    <a href="#">
+                        @@include('component.svg.html', {"name": "basket"})
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar__aside__btns__search">
+                <form action="">
+                    <input type="text" placeholder="Поиск">
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

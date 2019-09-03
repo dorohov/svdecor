@@ -1,9 +1,10 @@
 .banner {
-    @include col(background-color, var(--banner-bg), #1D2027);
+    @include col(background-color, var(--banner-bg), $banner-bg);
     position: relative;
+    overflow: hidden;
     &::after {
         content: '';
-        @include col(background-color, var(--banner-line-bg), #262930);
+        @include col(background-color, var(--banner-line-bg), $banner-line-bg);
         position: absolute;
         height: 100%;
         right: 155px;
@@ -12,6 +13,212 @@
     }
     &__inner {
         min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+    }
+    &__content {
+        padding-top: 160px;
+        min-height: calc(100vh - 195px);
+        &__list {
+            position: relative;
+            &__item {
+                position: absolute;
+                height: calc(100vh - 195px - 160px);
+                width: 100%;
+                display: flex;
+                align-items: center;
+                opacity: 0;
+                transition: 1.5s all ease;
+                transform: translateY(100%);
+                &.is--active {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                &.is--clos {
+                    transform: translateY(-100%);
+                }
+                &__left {
+                    width: 34vw;
+                    img {
+                        max-height: calc(100vh - 195px - 160px);
+                        max-width: 100%;
+                        height: auto;
+                        width: auto;
+                    }
+                }
+                &__content {
+                    &__company {
+                        color: #7B5F54;
+                        font-weight: 450;
+                        font-size: 24px;
+                        line-height: 75%;
+                        margin-bottom: 30px;
+                    }
+                    &__title {
+                        font-weight: 450;
+                        font-size: 72px;
+                        line-height: 90%;
+                        margin-bottom: 30px;
+                    }
+                    &__desc {
+                        margin-bottom: 75px;
+                        p {
+                            font-size: 18px;
+                            line-height: 112.5%;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__footer {
+        width: 100%;
+        margin-top: auto;
+        min-height: 195px;
+        position: relative;
+        z-index: 999;
+        &__inner {
+            display: flex;
+            align-items: center;
+        }
+        &__social {
+            width: 34vw;
+        }
+        &__list {
+            margin-right: 15vw;
+            ul {
+                display: flex;
+                align-items: center;
+                li {
+                    margin-right: 90px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+            &__block {
+                color: var(--text-color);
+                display: block;
+                cursor: pointer;
+                &__title {
+                    font-size: 16px;
+                    line-height: 112.5%;
+                    margin-bottom: 15px;
+                }
+                &__price {
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+            }
+        }
+        &__next {
+            &__block {
+                display: block;
+                &__inner {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:hover {
+                        .banner__footer__next {
+                            &__block {
+                                &__icon {
+                                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                }
+                            }
+                        }
+                    }
+                }
+                &__icon {
+                    width: 45px;
+                    height: 45px;
+                    display: flex;
+                    align-items: center;
+                    background: linear-gradient(135.71deg, #735850 20.78%, #5B433F 84.07%), #C4C4C4;
+                    transition: .25s all ease;
+                    justify-content: center;
+                    border-radius: 100%;
+                    margin-right: 15px;
+                    svg {
+                        fill: #fff;
+                    }
+                }
+                &__label {
+                    font-size: 16px;
+                    line-height: 98%;
+                    letter-spacing: 0.145em;
+                    color: var(--text-color);
+                }
+            }
+        }
+        &__scroll {
+            width: 155px;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &__inner {
+                padding: 0;
+                border: none;
+                background: transparent;
+                display: flex;
+                align-items: center;
+                transform-origin: center;
+                transform: rotate(-90deg);
+                cursor: pointer;
+                padding: 15px 0;
+                &:hover {
+                    .banner__footer__scroll {
+                        &__line {
+                            span {
+                                width: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+            &__text {
+                color: var(--text-color);
+                font-size: 18px;
+            }
+            &__line {
+                margin-right: 20px;
+                width: 40px;
+                span {
+                    display: block;
+                    height: 3px;
+                    background: #7B5F54;
+                    width: 40px;
+                    transition: .25s all ease;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .banner {
+        &__footer {
+            &__social {
+                width: 24vw;
+            }
+            &__list {
+                margin-right: 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .banner {
+        &__footer {
+            &__social {
+                display: none;
+            }
+        }
     }
 }
 

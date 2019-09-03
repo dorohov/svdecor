@@ -1,6 +1,13 @@
 @mixin col($param, $var, $color) {
     #{$param}: $var;
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        #{$param}: $color;
+        #{$param}: $color !important;
+    }
+}
+
+@mixin colBorder($param, $size, $type, $var, $color) {
+    #{$param}: $size $type $var;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        #{$param}: $size $type $color;
     }
 }
