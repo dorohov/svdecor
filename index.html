@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="navbar">
+    <div class="navbar is--transparent">
         <div class="navbar__inner container">
             <div class="navbar__left">
                 <ul class="iconset is--left">
@@ -36,7 +36,7 @@
             <div class="navbar__center">
                 <div class="navbar__menu">
                     <ul>
-                        <li><a href="#">Каталог</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
                         <li><a href="#">Акции</a></li>
                         <li><a href="#">Производство</a></li>
                     </ul>
@@ -89,7 +89,7 @@
         <div class="navbar__aside__inner">
             <div class="navbar__aside__menu">
                 <ul>
-                    <li class="is--ml"><a href="#">Каталог</a></li>
+                    <li class="is--ml"><a href="catalog.html">Каталог</a></li>
                     <li class="is--ml"><a href="#">Акции</a></li>
                     <li class="is--ml"><a href="#">Производство</a></li>
                     <li class="is--ml"><a href="#">Студия света</a></li>
@@ -463,7 +463,7 @@
                 <div class="in-td__left is--c-pl">
                     <div class="in-td__left__inner">
                         <div class="heading">
-                            <div class="heading__text">Производство</div>
+                            <div class="heading__text">Выбор цвета</div>
                             <div class="heading__sub">Инновационный интернет-магазин светильников <br>
                                 и товаров для дома. Мы предлагаем только то, <br>
                                 что купили бы сами. В каталоге нашего магазина <br>
@@ -478,16 +478,124 @@
                                     <use xlink:href="img/svg/sprites.svg#next"></use>
                                 </svg>
                             </span>
-                            <span class="is--text">подробнее</span>
+                            <span class="is--text">Выбрать цвет</span>
 
                         </a>
 
                     </div>
+                    <div class="in-td__left__img">
+                        <img src="img/3d.png" alt="">
+                    </div>
                 </div>
-                <div class="in-td__right is--c-pr">right</div>
+                <div class="in-td__right">
+                    <div class="in-td__form">
+                        <div class="in-td__form__inner">
+                            <div class="in-td__form__heading">Запрос на 3D модель</div>
+                            <form class="in-td__form__blocks">
+                                <div class="form-fields">
+                                    <div class="form-field is--w50">
+                                        <input type="text" name="td_name" id="td_name" required placeholder="&nbsp;">
+                                        <label for="td_name">Ваше имя</label>
+                                    </div>
+                                    <div class="form-field is--w50">
+                                        <input type="text" name="td_phone" id="td_phone" required placeholder="&nbsp;">
+                                        <label for="td_phone">Номер телефона</label>
+                                    </div>
+                                    <div class="form-submit">
+                                        <button type="submit" class="btn">
+                                            <span class="is--icon">
+                                                <svg class="svg-next-dims svg is--next">
+                                                    <use xlink:href="img/svg/sprites.svg#next"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="is--text">Запрос</span>
+                                        </button>
+                                        <div class="form-file">
+                                            <input type="file" name="td_file" id="td_file">
+                                            <label for="td_file">
+                                                <svg class="svg-clip-dims svg is--clip">
+                                                    <use xlink:href="img/svg/sprites.svg#clip"></use>
+                                                </svg>
+                                                <span>Выберите файл</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__top">
+                <div class="footer__top__logo">
+                    <a href="index.html">
+                        <svg class="svg-logo-dims svg is--logo">
+                            <use xlink:href="img/svg/sprites.svg#logo"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__menu">
+                <ul>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Пункты выдачи</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__soc">
+                <div class="social is--center">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-s_twitter-dims svg is--s_twitter">
+                                    <use xlink:href="img/svg/sprites.svg#s_twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-s_inst-dims svg is--s_inst">
+                                    <use xlink:href="img/svg/sprites.svg#s_inst"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-s_facebook-dims svg is--s_facebook">
+                                    <use xlink:href="img/svg/sprites.svg#s_facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-s_vk-dims svg is--s_vk">
+                                    <use xlink:href="img/svg/sprites.svg#s_vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__cop">&copy; 2019 SV Decor <br> Все права защищены</div>
+            <div class="footer__dorohov">
+                <a class="footer__dorohov__inner" href="http://dorohov.design" target="_blank">
+                    <div class="footer__dorohov__left">Создание <br> сайта —</div>
+                    <div class="footer__dorohov__right">
+                        <svg class="svg-dorohov-dims svg is--dorohov">
+                            <use xlink:href="img/svg/sprites.svg#dorohov"></use>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
     <script src="dist/js/svg4everybody.min.js"></script>
     <script src="dist/js/main.js"></script>

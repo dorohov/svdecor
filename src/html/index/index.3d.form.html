@@ -1,0 +1,32 @@
+<div class="in-td__form">
+    <div class="in-td__form__inner">
+        <div class="in-td__form__heading">Запрос на 3D модель</div>
+        <form class="in-td__form__blocks">
+            <div class="form-fields">
+                <div class="form-field is--w50">
+                    <input type="text" name="td_name" id="td_name" required placeholder="&nbsp;">
+                    <label for="td_name">Ваше имя</label>
+                </div>
+                <div class="form-field is--w50">
+                    <input type="text" name="td_phone" id="td_phone" required placeholder="&nbsp;">
+                    <label for="td_phone">Номер телефона</label>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="btn">
+                        <span class="is--icon">
+                            @@include('../components/component.svg.html', {"name": "next"})
+                        </span>
+                        <span class="is--text">Запрос</span>
+                    </button>
+                    <div class="form-file">
+                        <input type="file" name="td_file" id="td_file">
+                        <label for="td_file">
+                            @@include('../components/component.svg.html', {"name": "clip"})
+                            <span>Выберите файл</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

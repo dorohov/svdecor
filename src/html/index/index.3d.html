@@ -3,21 +3,26 @@
         <div class="in-td__left is--c-pl">
             <div class="in-td__left__inner">
                 <div class="heading">
-                    <div class="heading__text">Производство</div>
+                    <div class="heading__text">Выбор цвета</div>
                     <div class="heading__sub">Инновационный интернет-магазин светильников <br>
-                        и товаров для дома. Мы предлагаем только то, <br>
-                        что купили бы сами. В каталоге нашего магазина <br>
+                        и товаров для дома. Мы предлагаем только то, <br> 
+                        что купили бы сами. В каталоге нашего магазина <br> 
                         вы найдете только лучшие люстры, бра, торшеры <br>
                         и другие светильники.</div>
                 </div>
                 @@include('../components/component.button.html', {
                     "icon": "next",
-                    "text": "подробнее",
+                    "text": "Выбрать цвет",
                     "type": "link",
                     "href": "#"
                 })
             </div>
+            <div class="in-td__left__img">
+                <img src="img/3d.png" alt="">
+            </div>
         </div>
-        <div class="in-td__right is--c-pr">right</div>
+        <div class="in-td__right">
+            @@include('index.3d.form.html')
+        </div>
     </div>
 </div>

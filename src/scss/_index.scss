@@ -375,6 +375,36 @@
     &__inner {
         display: flex;
     }
+    &__left {
+        background: var(--tdblock-left-bg);
+        min-width: 51vw;
+        width: 51vw;
+        position: relative;
+        &__inner {
+            padding: 130px 0 140px 0;
+            .heading {
+                margin-bottom: 50px;
+            }
+        }
+        &__img {
+            position: absolute;
+            top: 0;
+            right: 6vw;
+        }
+    }
+    &__right {
+        background: var(--tdblock-right-bg);
+        width: 100%;
+    }
+    &__form {
+        &__inner {
+            padding: 150px 10.4vw 150px 6.3vw;
+        }
+        &__heading {
+            margin-bottom: 85px;
+            font-size: 36px;
+        }
+    }
 }
 
 @media (max-width: 1440px) {
@@ -426,6 +456,19 @@
         &__block {
             &__title {
                 font-size: 20px;
+            }
+        }
+    }
+    .in-td {
+        &__left {
+            min-width: 60vw;
+            &__inner {
+                padding: 100px 0;
+            }
+        }
+        &__form {
+            &__inner {
+                padding: 100px 50px;
             }
         }
     }
@@ -495,6 +538,16 @@
             }
         }
     }
+    .in-td {
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__left {
+            min-width: 0;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 1025px) {
@@ -508,6 +561,25 @@
         &__left {
             margin-right: 0;
             margin-bottom: 50px;
+        }
+    }
+    .in-td {
+        &__left {
+            &__inner {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+            &__img {
+                img {
+                    height: 350px;
+                    width: auto;
+                }
+            }
+        }
+        &__form {
+            &__inner {
+                padding: 50px 30px;
+            }
         }
     }
 }
@@ -601,6 +673,26 @@
                         width: 60px;
                     }
                 }
+            }
+        }
+    }
+    .in-td {
+        overflow: hidden;
+        &__left {
+            padding-right: 30px;
+            &__img {
+                top: -60px;
+                img {
+                    height: 250px;
+                }
+            }
+            &__inner {
+                padding-top: 220px;
+            }
+        }
+        &__form {
+            &__heading {
+                margin-bottom: 40px;
             }
         }
     }

@@ -1,1 +1,36 @@
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__top">
+            <div class="footer__top__logo">
+                <a href="@@pages.index">
+                    @@include('component.svg.html', {"name": "logo"})
+                </a>
+            </div>
+        </div>
+        <div class="footer__menu">
+            <ul>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Сотрудничество</a></li>
+                <li><a href="#">Пункты выдачи</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="@@pages.catalog">Каталог</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer__soc">
+            @@include('component.social.html', {
+                "align": "center"
+            })
+        </div>
+        <div class="footer__cop">&copy; 2019 SV Decor <br> Все права защищены</div>
+        <div class="footer__dorohov">
+            <a class="footer__dorohov__inner" href="http://dorohov.design" target="_blank">
+                <div class="footer__dorohov__left">Создание <br> сайта —</div>
+                <div class="footer__dorohov__right">
+                    @@include('component.svg.html', {"name": "dorohov"})
+                </div>
+            </a>
+        </div>
+    </div>
+</footer>
 @@include('component.scripts.html')

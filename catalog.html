@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Каталог — SVDECOR</title>
+    <script>
+        var styles = {
+            dark: 'dist/css/style_dark.css',
+            white: 'dist/css/style_white.css'
+        }
+    </script>
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+
+<body>
+    <div class="navbar is--default">
+        <div class="navbar__inner container">
+            <div class="navbar__left">
+                <ul class="iconset is--left">
+                    <li><button id="openSearch"><svg class="svg-search-dims svg is--search">
+                                <use xlink:href="img/svg/sprites.svg#search"></use>
+                            </svg></button></li>
+                </ul>
+            </div>
+            <div class="navbar__search">
+                <form action="">
+                    <input type="text" placeholder="Поиск по каталогу">
+                    <button type="submit"><svg class="svg-search-dims svg is--search">
+                            <use xlink:href="img/svg/sprites.svg#search"></use>
+                        </svg></button>
+                </form>
+            </div>
+            <div class="navbar__center">
+                <div class="navbar__menu">
+                    <ul>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Производство</a></li>
+                    </ul>
+                </div>
+                <div class="navbar__logo">
+                    <a href="index.html">
+                        <svg class="svg-logo-dims svg is--logo">
+                            <use xlink:href="img/svg/sprites.svg#logo"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="navbar__menu">
+                    <ul>
+                        <li><a href="#">Студия света</a></li>
+                        <li><a href="#">О магазине</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__right">
+                <ul class="iconset is--right">
+                    <li>
+                        <button type="button" onclick="changeColor();"><svg class="svg-light-dims svg is--light">
+                                <use xlink:href="img/svg/sprites.svg#light"></use>
+                            </svg></button>
+                        <div class="message" id="color-message" style="display: none;">
+                            <div class="message__inner">
+                                <div class="message__text">Вы можете поменять <br> цвет сайта</div>
+                                <div class="message__btn">
+                                    <button onclick="closeColorMessage()">Понятно</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#"><svg class="svg-basket-dims svg is--basket">
+                                <use xlink:href="img/svg/sprites.svg#basket"></use>
+                            </svg></a></li>
+                </ul>
+            </div>
+            <div class="navbar__mobile">
+                <button class="hamburger hamburger--spin" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="navbar__aside">
+        <div class="navbar__aside__inner">
+            <div class="navbar__aside__menu">
+                <ul>
+                    <li class="is--ml"><a href="catalog.html">Каталог</a></li>
+                    <li class="is--ml"><a href="#">Акции</a></li>
+                    <li class="is--ml"><a href="#">Производство</a></li>
+                    <li class="is--ml"><a href="#">Студия света</a></li>
+                    <li class="is--ml"><a href="#">О магазине</a></li>
+                    <li class="is--ml"><a href="#">Конаткты</a></li>
+                </ul>
+            </div>
+            <div class="navbar__aside__btns">
+                <ul>
+                    <li class="is--ml">
+                        <button id="openMobileSearch"><svg class="svg-search-dims svg is--search">
+                                <use xlink:href="img/svg/sprites.svg#search"></use>
+                            </svg></button>
+                    </li>
+                    <li class="is--ml">
+                        <button type="button" onclick="changeColor();"><svg class="svg-light-dims svg is--light">
+                                <use xlink:href="img/svg/sprites.svg#light"></use>
+                            </svg></button>
+                    </li>
+                    <li class="is--ml">
+                        <a href="#">
+                            <svg class="svg-basket-dims svg is--basket">
+                                <use xlink:href="img/svg/sprites.svg#basket"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar__aside__btns__search">
+                    <form action="">
+                        <input type="text" placeholder="Поиск">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="catalog page">
+            <div class="catalog__inner container">
+                <div class="breadcrumbs">
+                    <ul>
+
+                        <li><a href="index.html">Главная</a></li>
+
+                        <li>Контакты</li>
+                    </ul>
+                </div>
+                <div class="catalog__heading">
+                    <div class="heading">
+                        <div class="heading__text">Каталог</div>
+                    </div>
+                </div>
+                <div class="catalog__list">
+                    <div class="catalog__list__inner">
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat1.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat2.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+                                    <div class="catalog__block__top__left">
+                                        <span class="is--new">новинка</span>
+                                    </div>
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat3.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat4.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat5.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat1.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat2.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat3.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat4.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat5.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat1.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__left">
+                                        <span class="is--ac">акция</span>
+                                    </div>
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat2.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat3.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat4.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat5.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat1.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat2.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog__block">
+                            <div class="catalog__block__inner">
+                                <div class="catalog__block__top">
+
+
+                                    <div class="catalog__block__top__right">
+                                        <button>
+                                            <svg class="svg-bag-dims svg is--bag">
+                                                <use xlink:href="img/svg/sprites.svg#bag"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="item.html" class="catalog__block__link">
+                                    <div class="catalog__block__img">
+                                        <img src="img/cat3.png">
+                                    </div>
+                                    <div class="catalog__block__title">
+                                        <div class="catalog__block__title__name">Гипсовый светильник <br> SV 7213</div>
+                                        <div class="catalog__block__title__art">Артикул: 7213</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__top">
+                <div class="footer__top__logo">
+                    <a href="index.html">
+                        <svg class="svg-logo-dims svg is--logo">
+                            <use xlink:href="img/svg/sprites.svg#logo"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__menu">
+                <ul>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Пункты выдачи</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__soc">
+                <div class="social is--center">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-s_twitter-dims svg is--s_twitter">
+                                    <use xlink:href="img/svg/sprites.svg#s_twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-s_inst-dims svg is--s_inst">
+                                    <use xlink:href="img/svg/sprites.svg#s_inst"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-s_facebook-dims svg is--s_facebook">
+                                    <use xlink:href="img/svg/sprites.svg#s_facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-s_vk-dims svg is--s_vk">
+                                    <use xlink:href="img/svg/sprites.svg#s_vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__cop">&copy; 2019 SV Decor <br> Все права защищены</div>
+            <div class="footer__dorohov">
+                <a class="footer__dorohov__inner" href="http://dorohov.design" target="_blank">
+                    <div class="footer__dorohov__left">Создание <br> сайта —</div>
+                    <div class="footer__dorohov__right">
+                        <svg class="svg-dorohov-dims svg is--dorohov">
+                            <use xlink:href="img/svg/sprites.svg#dorohov"></use>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/svg4everybody.min.js"></script>
+    <script src="dist/js/main.js"></script>
+    <script>
+        svg4everybody();
+    </script>
+</body>
+
+</html>

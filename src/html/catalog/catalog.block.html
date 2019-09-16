@@ -1,0 +1,30 @@
+<div class="catalog__block">
+    <div class="catalog__block__inner">
+        <div class="catalog__block__top">
+            @@if(isnew == true) {
+                <div class="catalog__block__top__left">
+                    <span class="is--new">новинка</span>                    
+                </div>                
+            }
+            @@if(isaction == true) {
+                <div class="catalog__block__top__left">
+                    <span class="is--ac">акция</span>                    
+                </div>
+            }
+            <div class="catalog__block__top__right">
+                <button>
+                    @@include('../components/component.svg.html', {"name": "bag"})
+                </button>
+            </div>
+        </div>
+        <a href="@@pages.item" class="catalog__block__link">
+            <div class="catalog__block__img">
+                <img src="img/@@img">
+            </div>
+            <div class="catalog__block__title">
+                <div class="catalog__block__title__name">@@title</div>
+                <div class="catalog__block__title__art">Артикул: @@art</div>
+            </div>
+        </a>
+    </div>
+</div>

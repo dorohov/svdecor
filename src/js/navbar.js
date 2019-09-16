@@ -60,6 +60,16 @@
             toggleShowItemsMenu()
         }
 
+        setNavbarDefaultMode($(document).scrollTop())
+
+        function setNavbarDefaultMode(height) {
+            if(height > 10) {
+                $('.navbar').addClass('is--scroll')
+            }else {
+                $('.navbar').removeClass('is--scroll')
+            }
+        }
+
         $('#openSearch').on('click', function() {
             openSearchPanel()
         })
@@ -80,6 +90,10 @@
 
         $('.navbar__mobile button').on('click', function() {
             toggleNavbar()
+        })
+
+        $(document).scroll(function() {
+            setNavbarDefaultMode($(document).scrollTop())
         })
         
     })
