@@ -1,10 +1,16 @@
 @@if(type == 'link') {
     <a href="@@href" class="btn">
 }
+@@if(type == 'submit') {
+    <button class="btn">
+}
     <span class="is--icon">
         @@include('../components/component.svg.html', {"name": "@@icon"})
     </span>
     <span class="is--text">@@text</span>
 @@if(type == 'link') {
     </a>
+}
+@@if(type == 'submit') {
+    </button>
 }

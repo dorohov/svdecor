@@ -1,0 +1,157 @@
+@@include('../components/component.breadcrumbs.html', {
+    "list": [
+        {
+            "title": "Главная",
+            "url": "@@pages.index"
+        }
+    ],
+    "current": "Контакты"
+})
+<div class="item__main">
+    <div class="item__main__left">
+        <div class="heading">
+            <div class="heading__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, sequi?</div>
+        </div>
+        <div class="item__main__img">
+            <a href="img/item.png" data-fancybox="item">
+                <img src="img/item.png" alt="Гипсовый бра">
+            </a>
+            <a href="img/item_gold.png" data-fancybox="item">
+                <img src="img/item_gold.png" alt="Гипсовый бра">
+            </a>
+            <a href="img/item_silver.png" data-fancybox="item">
+                <img src="img/item_silver.png" alt="Гипсовый бра">
+            </a>
+            <a href="img/item_bronze.png" data-fancybox="item">
+                <img src="img/item_bronze.png" alt="Гипсовый бра">
+            </a>
+        </div>
+    </div>
+    <div class="item__main__center">
+        <div class="item__main__tabs">
+            <div class="item__main__tabs__inner tabs">
+                <div class="item__main__tabs__menu tabs-menu">
+                    <ul data-tabname="main_tabs">
+                        <li data-tabid="1"><span>Описание</span></li>
+                        <li data-tabid="2" class="is--active"><span>Характеристики</span></li>
+                        <li data-tabid="3"><span>Скачать</span></li>
+                    </ul>
+                </div>
+                <div class="item__main__tabs__container tabs-container" data-tabname="main_tabs">
+                    <div data-tabid="1" class="tab-item">
+                        <div class="item__main__desc">
+                            <div class="item__main__desc__heading">Описание серии</div>
+                            <div class="item__main__desc__content">
+                                <p>Компактный, но при этом очень разноплановый 
+                                светильник. Равномерное и четкое светораспределение 
+                                с возможностью фокусировки от 10 до 38 градусов,
+                                диммирование на корпусе или по TRIAC, овальная оптика, 
+                                фильтры, решетки и антибликовые аксессуары – всё это, 
+                                вместе с цветопередачей CRI95+, делает его одним 
+                                из наших самых популярных световых приборов</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-tabid="2" class="tab-item is--active">
+                        <form class="item__main__features">
+                            <ul>
+                                <li>
+                                    <div class="is--on"><span>Производитель</span></div>
+                                    <div class="is--tw"><span>SvDecor (Россия)</span></div>
+                                </li>
+                                <li>
+                                    <div class="is--on"><span>Ед. измерения</span></div>
+                                    <div class="is--tw"><span>шт.</span></div>
+                                </li>
+                                <li>
+                                    <div class="is--on"><span>Максимальная мощность</span></div>
+                                    <div class="is--tw"><span>50w</span></div>
+                                </li>
+                                <li>
+                                    <div class="is--on"><span>Врезное отверстие</span></div>
+                                    <div class="is--tw"><span>60mm</span></div>
+                                </li>
+                                <li>
+                                    <div class="is--on"><span>Наружный диаметр (мин.)</span></div>
+                                    <div class="is--tw"><span>108mm</span></div>
+                                </li>
+                                <li>
+                                    <div class="is--on"><span>Рабочее напряжение</span></div>
+                                    <div class="is--tw"><span>12-220</span></div>
+                                </li>
+                                <li>
+                                    <div class="is--on"><span>Тип лампы</span></div>
+                                    <div class="is--tw"><span>mr16</span></div>
+                                </li>
+                                <li>
+                                    <div class="is--on"><span>Вес с упаковкой</span></div>
+                                    <div class="is--tw"><span>180 гр.</span></div>
+                                </li>
+                                <li>
+                                    <div class="is--on"><span>Размер упаковки</span></div>
+                                    <div class="is--tw"><span>120*120*45mm</span></div>
+                                </li>
+                                <li>
+                                    <div class="is--on"><span>Гарантия</span></div>
+                                    <div class="is--tw"><span>12 месяцев</span></div>
+                                </li>
+                            </ul>
+                            <div class="item__main__features__color">
+                                <div class="item__main__features__color__heading">Выбранный цвет в наличии</div>
+                                <div class="item__main__features__color__body">
+                                    <ol>
+                                        <li class="is--active"><a href="#">Золото</a></li>
+                                        <li><a href="#">Серебро</a></li>
+                                        <li><a href="#">Бронза</a></li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="item__main__features__btn">
+                                @@include('../components/component.button.html', {
+                                    "type": "submit",
+                                    "icon": "next",
+                                    "text": "заказать цвет"
+                                })
+                            </div>
+                        </form>
+                    </div>
+                    <div data-tabid="3" class="tab-item">
+                        <div class="item__main__docs">
+                            <ul>
+                                <li>
+                                    <a href="#" class="item__main__docs__block">
+                                        <div class="item__main__docs__block__left">
+                                            @@include('../components/component.svg.html', {"name": "document"})
+                                        </div>
+                                        <div class="item__main__docs__block__right">Техническая <br> документация</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item__main__docs__block">
+                                        <div class="item__main__docs__block__left">
+                                            @@include('../components/component.svg.html', {"name": "document"})
+                                        </div>
+                                        <div class="item__main__docs__block__right">Инструкция по <br> установке</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item__main__docs__block">
+                                        <div class="item__main__docs__block__left">
+                                            @@include('../components/component.svg.html', {"name": "document"})
+                                        </div>
+                                        <div class="item__main__docs__block__right">3D модель</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item__main__right">
+        <div class="item__main__coun">
+            <img src="img/item_c.svg" alt="Гипсовый бра">
+        </div>
+    </div>
+</div>

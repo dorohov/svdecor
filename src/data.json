@@ -17,6 +17,7 @@
         "catalog": "catalog.html",
         "catalog.tabs": "catalog.tabs.html",
         "item": "item.html",
+        "item.carousel": "item.carousel.html",
         "basket": "basket.html",
         "promotions": "promotions",
         "cooperation": "cooperation.html",

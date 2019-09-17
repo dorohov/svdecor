@@ -167,6 +167,137 @@
     }
 }
 
+.dropdown {
+    position: relative;
+    &__title {
+        user-select: none;
+    }
+    &__list {
+        position: absolute;
+        right: 50%;
+        top: 100%;
+        transform: translateX(50%) translateY(10px);
+        opacity: 0;
+        z-index: 9999999;
+        transition: .25s all ease;
+        visibility: hidden;
+    }
+    &.is--open {
+        .dropdown {
+            &__list {
+                transform: translateY(0) translateX(50%);
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    &.is--default {
+        .dropdown {
+            &__title {
+                font-size: 18px;
+                color: var(--text-color);
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                svg {
+                    margin-top: 3px;
+                    margin-left: 12px;
+                    fill: var(--text-color);
+                }
+            }
+            &__list {
+                padding-top: 20px;
+                &__inner {
+                    background-color: var(--text-color);
+                    padding: 10px 15px;
+                    border-radius: 6px;
+                    &::after {
+                        bottom: calc(100% - 20px);
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        border: solid transparent;
+                        content: " ";
+                        height: 0;
+                        width: 0;
+                        position: absolute;
+                        pointer-events: none;
+                        border-color: rgba(136, 183, 213, 0);
+                        border-bottom-color: var(--text-color);
+                        border-width: 11px;
+                    }
+                    ul {
+                        li {
+                            a {
+                                color: var(--main-bg);
+                                white-space: nowrap;
+                                display: block;
+                                padding: 5px 0;
+                                transition: .25s all ease;
+                                &:hover {
+                                    transform: translateX(5px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pagination {
+    &__inner {
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                margin: 0 5px;
+                &.is--num {
+                    a,
+                    span {
+                        width: 38px;
+                        height: 38px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100%;
+                        transition: .25s all ease;
+                        background: none;
+                    }
+                    span {
+                        &.is--active {
+                            background: linear-gradient(135.66deg, #7B5F54 15.02%, #5B433F 87.53%), #C4C4C4;
+                        }
+                    }
+                    a {
+                        transition: 0;
+                        &:hover {
+                            background: linear-gradient(135.66deg, #7B5F54 15.02%, #5B433F 87.53%), #C4C4C4;
+                        }
+                    }
+                }
+                a, span {
+                    font-size: 18px;
+                    color: var(--text-color);
+                }
+                &.is--last {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+.tab {
+    &-item {
+        display: none;
+        &.is--active {
+            display: block;
+        }
+    }
+}
+
 @media (max-width: 1200px) {
     .page {
         padding: 110px 0 50px 0;
@@ -208,5 +339,27 @@
     }
     .breadcrumbs {
         display: none;
+    }
+    .pagination {
+        &__inner {
+            ul {
+                li {
+                    a, span {
+                        font-size: 16px;
+                    }
+                    margin: 0 2px;
+                    &.is--last {
+                        margin: 0 0 0 5px;
+                    }
+                    &.is--num {
+                        a,
+                        span {
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
