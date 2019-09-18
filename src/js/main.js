@@ -43,6 +43,12 @@
             }
             $('html,body').animate({scrollTop: $(aid).offset().top - $('.navbar').innerHeight()},'slow');
         })
+
+        $('.item-carousel__items').slick({
+            prevArrow: '.item-carousel__controls button.is--prev',
+            nextArrow: '.item-carousel__controls button.is--next',
+            swipe: false
+        })
         
     })
 })(jQuery);

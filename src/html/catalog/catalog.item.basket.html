@@ -1,0 +1,32 @@
+<div class="item-basket">
+    <div class="item-basket__inner container">
+        <form class="item-basket__line">
+            <div class="item-basket__line__left">
+                <div class="item-basket__line__art is--text">Артикул: 7175</div>
+                <div class="item-basket__line__co is--text">Наличие товара: Товар есть в наличии</div>
+            </div>
+            <div class="item-basket__line__right">
+                <div class="item-basket__line__price">Цена: 560  ₽</div>
+                <div class="item-basket__line__count">
+                    <div class="item-basket__line__count__inner counter">
+                        <button class="is--minus" type="button" data-action="minus">
+                            @@include('../components/component.svg.html', {"name": "c_minus"})
+                        </button>
+                        <input type="number" value="1" max="9999" min="1">
+                        <button class="is--plus" type="button" data-action="plus">
+                            @@include('../components/component.svg.html', {"name": "c_plus"})
+                        </button>
+                    </div>
+                </div>
+                <div class="item-basket__line__btn">
+                    @@include('../components/component.button.html', {
+                        "icon": "bask_btn",
+                        "text": "В корзину",
+                        "type": "submit",
+                        "href": "#"
+                    })
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="item-bulb">
+    <div class="heading container">
+        <div class="heading__text">Выбрать лампочку</div>
+    </div>
+    <div class="item-bulb__inner container">
+        <div class="item-bulb__left">
+            <img src="img/bulb.svg" alt="">
+        </div>
+        <form class="item-bulb__right">
+            <div class="item-bulb__filters">
+                <div class="item-bulb__filters__block">
+                    <div class="item-bulb__filters__block__heading">Цветофаза</div>
+                    <div class="item-bulb__filters__block__list">
+                        <div class="item-bulb__filters__block__list__check change is--w50">
+                            <div class="is--row">
+                                <div class="change-block">
+                                    <input type="radio" name="bf11" id="bf11" checked>
+                                    <label for="bf11">6ВГ</label>
+                                </div>
+                                <div class="change-block">
+                                    <input type="radio" name="bf11" id="bf12">
+                                    <label for="bf12">9ВГ</label>
+                                </div>
+                            </div>
+                            <div class="is--row">
+                                <div class="change-block">
+                                    <input type="radio" name="bf11" id="bf13">
+                                    <label for="bf13">7ВГ</label>
+                                </div>
+                                <div class="change-block">
+                                    <input type="radio" name="bf11" id="bf14">
+                                    <label for="bf14">10ВГ</label>
+                                </div>
+                            </div>
+                            <div class="change-block">
+                                <input type="radio" name="bf11" id="bf15">
+                                <label for="bf15">8ВГ</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-bulb__filters__block">
+                    <div class="item-bulb__filters__block__heading">Мощность</div>
+                    <div class="item-bulb__filters__block__list">
+                        <div class="item-bulb__filters__block__list__check change is--w100">
+                            <div class="change-block">
+                                <input type="radio" name="bf12" id="bf21" checked>
+                                <label for="bf21">2700К</label>
+                            </div>
+                            <div class="change-block">
+                                <input type="radio" name="bf12" id="bf22">
+                                <label for="bf22">4000К</label>
+                            </div>
+                            <div class="change-block">
+                                <input type="radio" name="bf12" id="bf23">
+                                <label for="bf23">6000К</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-bulb__filters__block">
+                    <div class="item-bulb__filters__block__heading">Стекло</div>
+                    <div class="item-bulb__filters__block__list">
+                        <div class="item-bulb__filters__block__list__check change is--w100">
+                            <div class="change-block">
+                                <input type="radio" name="bf13" id="bf31" checked>
+                                <label for="bf31">Матовое</label>
+                            </div>
+                            <div class="change-block">
+                                <input type="radio" name="bf13" id="bf32">
+                                <label for="bf32">Прозрачное</label>
+                            </div>
+                            <div class="change-block">
+                                <input type="radio" name="bf13" id="bf33">
+                                <label for="bf33">Прозрачное</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-bulb__price">
+                <div class="item-bulb__price__num">Цена: 200 ₽</div>
+                <div class="item-bulb__price__btn">
+                    @@include('../components/component.button.html', {
+                        "icon": "bask_btn",
+                        "text": "В корзину",
+                        "type": "submit",
+                        "href": "#"
+                    })
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

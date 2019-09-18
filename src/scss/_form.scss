@@ -1,4 +1,9 @@
 .form {
+    background: var(--form-c1-bg);
+    padding: 130px 0 120px 0;
+    .heading {
+        margin-bottom: 90px;
+    }
     &-fields {
         display: flex;
         flex-wrap: wrap;
@@ -10,6 +15,10 @@
         position: relative;
         &.is--w50 {
             max-width: 50%;
+            width: 100%;
+        }
+        &.is--w25 {
+            max-width: 25%;
             width: 100%;
         }
         input[type="text"],
@@ -39,6 +48,21 @@
             transition: .25s all ease;
             user-select: none;
         }
+        &-file {
+            input[type="file"] {
+                display: none;
+            }
+            label {
+                cursor: pointer;
+                display: block;
+                position: static;
+                width: 100%;
+                box-sizing: border-box;
+                border-bottom: 1px solid var(--form-field);
+                background: transparent;
+                padding: 10px 0 20px 0;
+            }
+        }
     }
     &-submit {
         padding: 70px 23px 0 23px;
@@ -46,6 +70,17 @@
         align-items: center;
         button {
             margin-right: 45px;
+        }
+    }
+    &-cop {
+        font-size: 14px;
+        a {
+            font-weight: 500;
+            transition: .25s all ease;
+            color: var(--text-color);
+            &:hover {
+                color: $c-primary;
+            }
         }
     }
     &-file {
@@ -141,8 +176,26 @@
     }
 }
 
+@media (max-width: 1025px) {
+    .form {
+        &-field {
+            &.is--w25 {
+                max-width: 50%;
+                &:nth-child(1),
+                &:nth-child(2) {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .form {
+        padding: 50px 0;
+        .heading {
+            margin-bottom: 40px;
+        }
         &-fields {
             margin: 0 !important;
         }
@@ -161,6 +214,9 @@
         &-file {
             max-width: 100%;
             width: 100%;
+            padding-top: 30px;
+        }
+        &-cop {
             padding-top: 30px;
         }
     }

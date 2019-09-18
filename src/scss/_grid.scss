@@ -97,6 +97,7 @@
     border-radius: 50px;
     background: transparent;
     cursor: pointer;
+    white-space: nowrap;
     &:hover {
         span {
             &.is--text {
@@ -268,12 +269,14 @@
                     span {
                         &.is--active {
                             background: linear-gradient(135.66deg, #7B5F54 15.02%, #5B433F 87.53%), #C4C4C4;
+                            color: #fff;
                         }
                     }
                     a {
                         transition: 0;
                         &:hover {
                             background: linear-gradient(135.66deg, #7B5F54 15.02%, #5B433F 87.53%), #C4C4C4;
+                            color: #fff;
                         }
                     }
                 }
