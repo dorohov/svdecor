@@ -1,0 +1,22 @@
+<div class="promotions page">
+    <div class="promotions__inner container">
+        @@include('../components/component.breadcrumbs.html', {
+            "list": [
+                {
+                    "title": "Главная",
+                    "url": "@@pages.index"
+                }
+            ],
+            "current": "Контакты"
+        })
+        <div class="heading">
+            <div class="heading__text">Акции магазина</div>
+        </div>
+        <div class="promotions__count">Найдено: <span>1 акция</span></div>
+        <div class="promotions__list">
+            @@include('promotions.line.html')
+            @@include('promotions.line.html')
+        </div>
+        @@include('../components/component.pagination.html')
+    </div>
+</div>

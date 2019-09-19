@@ -13,13 +13,16 @@
     &-field {
         padding: 0 23px;
         position: relative;
+        width: 100%;
         &.is--w50 {
             max-width: 50%;
-            width: 100%;
         }
         &.is--w25 {
             max-width: 25%;
-            width: 100%;
+        }
+        &.is--w100 {
+            max-width: 100%;
+            margin-bottom: 50px;
         }
         input[type="text"],
         input[type="email"],

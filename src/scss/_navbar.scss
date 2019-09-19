@@ -37,9 +37,53 @@
                 height: 100px;
             }
         }
+        .navbar__menu ul li a {
+            color: var(--text-color) !important;
+        }
+        .navbar__logo svg {
+            fill: var(--text-color) !important;
+        }
+        .iconset {
+            svg {
+                fill: var(--text-color) !important;
+            }
+        }
+        .navbar__search form input[type=text] {
+            border-color: var(--text-color) !important;
+            color: var(--text-color) !important;
+            &::placeholder {
+                color: var(--text-color) !important;
+            }
+        }
+        .navbar__search form button svg {
+            fill: var(--text-color) !important;
+        }
     }
     &.is--default {
         border-bottom: 1px solid var(--navbar-border-color);
+    }
+    &.is--transparent-border {
+        .navbar__menu ul li a {
+            color: #fff;
+        }
+        .navbar__logo svg {
+            fill: #fff;
+        }
+        .iconset {
+            svg {
+                fill: #fff;
+            }
+        }
+        .navbar__search form input[type=text] {
+            border-color: #fff;
+            color: #fff;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+        .navbar__search form button svg {
+            fill: #fff;
+        }
     }
     &__inner {
         height: 160px;

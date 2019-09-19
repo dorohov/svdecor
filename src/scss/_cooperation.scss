@@ -1,0 +1,133 @@
+.cooperation {
+    padding-bottom: 0;
+    .heading {
+        margin-bottom: 70px;
+    }
+    &__wrap {
+        display: flex;
+        margin: 0 -15px;
+    }
+    &__left,
+    &__right {
+        max-width: 50%;
+        width: 100%;
+        padding: 0 15px;
+    }
+    &__heading {
+        font-size: 36px;
+        line-height: 108%;
+        margin-bottom: 25px;
+    }
+    &__top {
+        padding-bottom: 100px;
+        border-bottom: 1px solid var(--navbar-border-color);
+    }
+    &__bottom {
+        padding: 100px 0 20px 0;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__block {
+        max-width: 25%;
+        width: 100%;
+        margin-bottom: 80px;
+        &__inner {
+            display: flex;
+            align-items: center;
+        }
+        &__left {
+            margin-right: 20px;
+            svg {
+                fill: $c-primary;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .cooperation {
+        &__block {
+            max-width: 33.33333%;
+        }
+    }
+}
+
+@media (max-width: 1025px) {
+    .cooperation {
+        &__wrap {
+            flex-wrap: wrap;
+            margin: 0;
+        }
+        &__left,
+        &__right {
+            padding: 0;
+            max-width: 100%;
+        }
+        &__left {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .cooperation {
+        &__list {
+            margin: 0 -15px;
+        }
+        &__block {
+            max-width: 50%;
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .cooperation {
+        &__top {
+            padding-bottom: 50px;
+        }
+        .heading {
+            margin-bottom: 30px;
+        }
+        &__heading {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .cooperation {
+        &__bottom {
+            padding-top: 50px;
+        }
+        &__list {
+            margin: 0 -10px;
+        }
+        &__block {
+            padding: 0 10px;
+            margin-bottom: 30px;
+            &__inner {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            &__left {
+                margin-right: 0;
+                margin-bottom: 15px;
+                svg {
+                    height: 55px;
+                }
+            }
+            &__right {
+                width: 100%;
+                text-align: center;
+                font-size: 14px;
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}

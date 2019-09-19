@@ -1,0 +1,50 @@
+<div class="basket">
+    <div class="basket__inner">
+        <div class="basket__left is--c-pl">
+            @@include('../components/component.breadcrumbs.html', {
+                "list": [
+                    {
+                        "title": "Главная",
+                        "url": "@@pages.index"
+                    }
+                ],
+                "current": "Контакты"
+            })
+            <div class="heading">
+                <div class="heading__text">Ваши покупки</div>
+            </div>
+            <div class="basket__list">
+                @@include('basket.line.html', {
+                    "title": "Гипсовый светильник <br> SV 7213",
+                    "img": "cat1.png",
+                    "price": "560",
+                    "art": "7175",
+                    "color": "white"
+                })
+                @@include('basket.line.html', {
+                    "title": "Гипсовый светильник <br> SV 7213",
+                    "img": "cat2.png",
+                    "price": "560",
+                    "art": "7175",
+                    "color": "blue"
+                })
+                @@include('basket.line.html', {
+                    "title": "Гипсовый светильник <br> SV 7213",
+                    "img": "cat3.png",
+                    "price": "560",
+                    "art": "7175",
+                    "color": "yellow"
+                })
+            </div>
+            <div class="basket__total">
+                <div class="basket__total__inner">
+                    <div class="basket__total__heading">Итого:</div>
+                    <div class="basket__total__num">2360 ₽</div>
+                </div>
+            </div>
+        </div>
+        <div class="basket__right">
+            @@include('basket.form.html')
+        </div>
+    </div>
+</div>

@@ -28,8 +28,20 @@ function setColor(colorMode) {
     link.id = theme;
     link.className = 'color-scheme';
 
-    if(theme == 'white') link.href = styles.white;
-    else if (theme == 'dark') link.href = styles.dark;
+    var classList = document.body.classList;
+    while (classList.length > 0) {
+    classList.remove(classList.item(0));
+    }
+
+    if(theme == 'white') {
+        link.href = styles.white;
+
+        document.body.classList.add('is--white')
+    }
+    else if (theme == 'dark') {
+        link.href = styles.dark;
+        document.body.classList.add('is--dark')
+    }
 
     document.head.append(link);
 }

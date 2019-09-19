@@ -1,0 +1,35 @@
+<div class="basket__line">
+    <div class="basket__line__inner">
+        <div class="basket__line__left">
+            <div class="basket__line__img">
+                <a href="@@pages.item">
+                    <img src="img/@@img" alt="">
+                </a>
+            </div>
+            <div class="basket__line__title">
+                <div class="basket__line__title__name">@@title</div>
+                <div class="basket__line__title__art">Артикул: @@art</div>
+            </div>
+        </div>
+        <div class="basket__line__right">
+            <div class="basket__line__color">
+                <div class="basket__line__color__heading">Цвет</div>
+                <div class="basket__line__color__circle">
+                    <span class="is--bg-@@color"></span>
+                </div>
+            </div>
+            <div class="basket__line__count">
+                <div class="basket__line__count__inner counter">
+                    <button class="is--minus" type="button" data-action="minus">
+                        @@include('../components/component.svg.html', {"name": "c_minus"})
+                    </button>
+                    <input type="number" value="1" max="9999" min="1">
+                    <button class="is--plus" type="button" data-action="plus">
+                        @@include('../components/component.svg.html', {"name": "c_plus"})
+                    </button>
+                </div>
+            </div>
+            <div class="basket__line__price">@@price ₽</div>
+        </div>
+    </div>
+</div>

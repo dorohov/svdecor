@@ -4,6 +4,21 @@ body {
     @include col(background-color, var(--main-bg), $main-bg);
     color: var(--text-color);
     font-family: 'Futura PT';
+    &.is--white {
+        .basket__line__color__circle span.is--bg-white {
+            border: 1px solid #C4C4C4;
+        }
+        .basket__line__title__art,
+        .basket__total__heading {
+            color: #0F0F0F;
+        }
+    }
+    &.is--dark {
+        .basket__line__title__art,
+        .basket__total__heading {
+            color: #AFAFAF;
+        } 
+    }
 }
 
 *,
@@ -37,4 +52,35 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+
+.is--bg {
+    &-white {
+        background: #fff;
+    }
+    &-blue {
+        background: #4992FF;
+    }
+    &-yellow {
+        background: #FFBB54;
+    }
+}
+
+.article {
+    p {
+        font-size: 18px;
+        line-height: 112.5%;
+        margin: 0 0 20px 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .article {
+        p {
+            font-size: 16px;
+        }
+    }
 }
