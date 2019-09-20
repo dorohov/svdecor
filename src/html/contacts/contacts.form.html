@@ -1,0 +1,34 @@
+<div class="contacts__form">
+    <div class="contacts__form__inner">
+        <div class="contacts__form__heading">Связь с администрацией</div>
+        <div class="form-fields">
+            <div class="form-field is--w100">
+                <input type="text" name="f_name" id="f_name" placeholder="&nbsp;">
+                <label for="f_name">Ваше имя</label>
+            </div>
+            <div class="form-field is--w100">
+                <input type="text" name="f_email" id="f_email" placeholder="&nbsp;">
+                <label for="f_email">Ваш email</label>
+            </div>
+            <div class="form-field is--w100">
+                <input type="text" name="f_text" id="f_text" placeholder="&nbsp;">
+                <label for="f_text">Текст сообщения</label>
+            </div>
+            <div class="form-submit">
+                <div class="form-file">
+                        <input type="file" name="td_file" id="td_file">
+                        <label for="td_file">
+                            @@include('../components/component.svg.html', {"name": "clip"})
+                            <span>Выберите файл</span>
+                        </label>
+                    </div>
+                <button type="submit" class="btn">
+                    <span class="is--icon">
+                        @@include('../components/component.svg.html', {"name": "next"})
+                    </span>
+                    <span class="is--text">Отправить</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

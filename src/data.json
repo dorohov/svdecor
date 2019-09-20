@@ -26,6 +26,7 @@
         "contacts": "contacts.html",
         "production": "production.html",
         "studio": "studio.html",
-        "error404": "404.html"
+        "error404": "404.html",
+        "about": "about.html"
     }
 }

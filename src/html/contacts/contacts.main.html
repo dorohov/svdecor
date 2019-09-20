@@ -1,0 +1,45 @@
+<div class="contacts">
+    <div class="contacts__inner">
+        <div class="contacts__left is--c-pl">
+            @@include('../components/component.breadcrumbs.html', {
+                "list": [
+                    {
+                        "title": "Главная",
+                        "url": "@@pages.index"
+                    }
+                ],
+                "current": "Контакты"
+            })
+            <div class="heading">
+                <div class="heading__text">Контакты</div>
+            </div>
+            <div class="contacts__heading">Офис:</div>
+            <div class="contacts__block article">
+                <div class="contacts__block__line">
+                    <div class="contacts__block__left">
+                        <p>Адрес: Россия 302004 г. Москва, <br> ул. 3-ая Курская, 80</p>
+                        <p>E-mail: info@svdec.ru</p>
+                    </div>
+                    <div class="contacts__block__right">
+                        <p>Тел: +7 (495) 120-16-24, <br> +7 (903) 637-18-24</p>
+                        <p>Время работы: Пн.–Пт.: с 10:00 <br> до 19:00; Сб.-Вс.: с 10:00 до 18:00</p>
+                    </div>
+                </div>
+                <div class="contacts__block__line">
+                    <div class="contacts__block__left">
+                        <div class="contacts__heading">Бухгалтерия:</div>
+                        <p>Служба доставки: <br> dostavka@svdec.ru</p>
+                    </div>
+                    <div class="contacts__block__right">
+                        <div class="contacts__heading">Отдел маркетинга:</div>
+                        <p>Отдел по работе с оптовыми <br> клиентами: opt@svdec.ru</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contacts__right">
+            @@include('contacts.form.html')
+        </div>
+    </div>
+</div>
+@@include('contacts.shops.html')

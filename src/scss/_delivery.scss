@@ -1,0 +1,127 @@
+.delivery {
+    .heading {
+        margin-bottom: 70px;
+    }
+    &__heading {
+        &-h1 {
+            font-size: 36px;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+        &-h2 {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+    }
+    &__block {
+        display: flex;
+        &__left {
+            max-width: 620px;
+            width: 100%;
+            margin-right: 30px;
+        }
+    }
+    &__images {
+        display: flex;
+        align-items: center;
+        img {
+            width: auto;
+            max-width: 100%;
+            margin-right: 70px;
+            flex-wrap: wrap;
+            align-items: center;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &__bq {
+        font-size: 18px;
+        line-height: 135.5%;
+        &__heading {
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.pay {
+    &__inner {
+        .heading {
+            margin-bottom: 70px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .delivery {
+        &__block {
+            &__left {
+                max-width: 450px;
+            }
+        }
+        &__heading {
+            &-h1 {
+                font-size: 28px;
+            }
+            &-h2 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        &__images {
+            flex-wrap: wrap;
+            max-width: 70%;
+            width: 100%;
+            img {
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1025px) {
+    .delivery {
+        &__block {
+            flex-wrap: wrap;
+            &__left,
+            &__right {
+                margin-left: 0;
+                margin-right: 0;
+                max-width: 100%;
+                width: 100%;
+            }
+            &__left {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .delivery {
+        .heading {
+            margin-bottom: 30px;
+        }
+        &__heading {
+            &-h1 {
+                font-size: 20px;
+            }
+        }
+        &__images {
+            &.is--pay {
+                padding-top: 40px;
+            }
+        }
+    }
+    .pay {
+        &__inner {
+            .heading {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
