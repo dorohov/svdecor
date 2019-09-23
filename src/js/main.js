@@ -49,6 +49,27 @@
             nextArrow: '.item-carousel__controls button.is--next',
             swipe: false
         })
+
+        $('.production-carousel__right__list').slick({
+            prevArrow: '.production-carousel__left__arrows button.is--prev',
+            nextArrow: '.production-carousel__left__arrows button.is--next',
+            swipe: false
+        })
+
+        $('.production-carousel__right__list').on('afterChange', function() {
+            setCarouselDatas()
+        })
+
+        function setCarouselDatas() {
+            var _this = $('.production-carousel__right__list__item.slick-active'),
+            _thisTitle = $(_this).data('title'),
+            _thisDesc = $(_this).data('desc'),
+            _thisLink = $(_this).data('link')
+
+            $('.production-carousel__left__heading').html(_thisTitle)
+            $('.production-carousel__left__desc').html(_thisDesc)
+            $('.production-carousel__left__btn .btn').attr('href', _thisLink)
+        }
         
     })
 })(jQuery);

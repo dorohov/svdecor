@@ -9,15 +9,15 @@
             ],
             "current": "Контакты"
         })
-        <div class="heading is--menu">
-            <div class="heading__text">Производство</div>
+        <div class="heading is--menu" id="prod1">
+            <div class="heading__text production-dot is--on">Производство</div>
             <div class="heading__menu">
                 <ul>
-                    <li class="is--active"><a href="#">Производство</a></li>
-                    <li><a href="#">Условия сотрудничества</a></li>
-                    <li><a href="#">Наши стенды</a></li>
-                    <li><a href="#">Готовые решения</a></li>
-                    <li><a href="#">Заявка</a></li>
+                    <li class="is--active"><a href="#prod1" class="anchor">Производство</a></li>
+                    <li><a href="#prod2" class="anchor">Условия сотрудничества</a></li>
+                    <li><a href="#prod3" class="anchor">Наши стенды</a></li>
+                    <li><a href="#prod4" class="anchor">Готовые решения</a></li>
+                    <li><a href="#prod5" class="anchor">Заявка</a></li>
                 </ul>
             </div>
         </div>
@@ -25,12 +25,12 @@
             <div class="article__block__left">
                 <p>Каллисто, по определению, слабопроницаем. Туманность Андромеды дает космический натуральный логарифм, тем не менее, Дон Еманс включил в список всего 82-е Великие Кометы. Большой круг небесной сферы изменяем. Ганимед гасит первоначальный Южный Треугольник.</p>
                 <p class="is--mb60">Атомное время жизненно выслеживает вращательный астероид, тем не менее, уже 4,5 млрд лет расстояние нашей планеты от Солнца практически не меняется. Межзвездная матеpия последовательно выбирает межпланетный реликтовый ледник. Спектральная картина прекрасно решает случайный афелий – север вверху, восток слева.</p>
-                @@include('../components/component.button.html', {
-                    "icon": "next",
-                    "text": "смотреть видео",
-                    "type": "link",
-                    "href": "#"
-                })
+                <a href="https://www.youtube.com/watch?v=fregObNcHC8" class="btn" data-fancybox>
+                    <span class="is--icon">
+                        @@include('../components/component.svg.html', {"name": "next"})
+                    </span>
+                    <span class="is--text">смотреть видео</span>
+                </a>
             </div>
             <div class="article__block__right">
                 <p>Туманность Андромеды точно представляет собой секстант. Прямое восхождение недоступно отражает параллакс. Магнитное поле, как бы это ни казалось парадоксальным, иллюстрирует далекий перигелий.</p>
@@ -71,5 +71,20 @@
                 "text": "Возможность  бесплатной рекламной <br> кампании вашего магазина"
             })
         </div>
+    </div>
+    @@include('production.conditions.html')
+    @@include('production.stands.html')
+    @@include('production.carousel.html', {
+        "img": "pc1.jpg",
+        "dot": true,
+        "btn_text": "подробнее",
+        "prefix": "production",
+        "title": "Готовые решения",
+        "desc": "Тетрахорд представляет собой принцип восприятия. <br> Сомнение, так или иначе, образует open-air. <br> Асинхронное ритмическое поле дискредитирует  <br>мономерный закон внешнего мира."
+    })
+    <div id="prod5">
+        @@include('../simple/simple.form.html', {
+            "title": "Заявка на индивидуальный заказ"
+        })
     </div>
 </div>

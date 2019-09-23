@@ -1,0 +1,24 @@
+<div class="studio page">
+    <div class="studio__inner container">
+        @@include('../components/component.breadcrumbs.html', {
+            "list": [
+                {
+                    "title": "Главная",
+                    "url": "@@pages.index"
+                }
+            ],
+            "current": "Контакты"
+        })
+        <div class="heading">
+            <div class="heading__text">Студия света</div>
+        </div>
+    </div>
+</div>
+@@include('../production/production.carousel.html', {
+    "img": "studio1.jpg",
+    "dot": false,
+    "btn_text": "заказать проект",
+    "prefix": "studio",
+    "title": "Наш проект",
+    "desc": "Тетрахорд представляет собой принцип восприятия. <br> Сомнение, так или иначе, образует open-air. <br> Асинхронное ритмическое поле дискредитирует  <br>мономерный закон внешнего мира."
+})

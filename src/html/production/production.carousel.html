@@ -1,0 +1,46 @@
+<div class="production-carousel is--@@prefix" id="prod4">
+    <div class="production-carousel__inner">
+        <div class="production-carousel__left">
+            <div class="production-carousel__left__inner is--c-pl">
+                @@if(dot == true) {
+                    <div class="production-carousel__left__heading production-dot">@@title</div>
+                }
+                @@if(dot == false) {
+                    <div class="production-carousel__left__heading">@@title</div>
+                }
+                <div class="production-carousel__left__desc">
+                    @@desc
+                </div>
+                <div class="production-carousel__left__btn">
+                    @@include('../components/component.button.html', {
+                        "icon": "next",
+                        "text": "@@btn_text",
+                        "type": "link",
+                        "href": "#"
+                    })
+                </div>
+                <div class="production-carousel__left__arrows carousel-controls">
+                    <button class="is--prev">
+                        <img src="img/arrow.svg" alt="">
+                    </button>
+                    <button class="is--next">
+                        <img src="img/arrow.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="production-carousel__right">
+            <div class="production-carousel__right__list">
+                <div class="production-carousel__right__list__item" data-title="@@title1" data-desc="@@desc1" data-link="#">
+                    <img src="img/@@img" alt="">
+                </div>
+                <div class="production-carousel__right__list__item" data-title="@@title2" data-desc="@@desc2" data-link="#2">
+                    <img src="img/@@img" alt="">
+                </div>
+                <div class="production-carousel__right__list__item" data-title="@@title3" data-desc="@@desc3" data-link="#3">
+                    <img src="img/@@img" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

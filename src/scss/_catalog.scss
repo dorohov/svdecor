@@ -471,25 +471,6 @@
         left: 0;
         right: 0;
         justify-content: flex-end;
-        button {
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            width: 43px;
-            height: 43px;
-            background: $c-primary;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 100%;
-            margin: 0 9px;
-            img {
-                max-width: 23px;
-            }
-            &.is--next {
-                transform: rotate(180deg);
-            }
-        }
     }
 }
 

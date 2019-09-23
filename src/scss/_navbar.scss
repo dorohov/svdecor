@@ -3,8 +3,11 @@
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 99999;
+    z-index: 9999;
     transition: .25s all ease;
+    &.is--nnb {
+        background: var(--main-bg);
+    }
     &.is--search {
         .navbar {
             &__search {
