@@ -76,10 +76,10 @@
         padding: 5px;
         &__inner {
             display: block;
-            background: var(--catalog-card-bg);
+            @include col(background, var(--catalog-card-bg), $catalog-card-bg);
             transition: .25s all ease;
             &:hover {
-                background: var(--catalog-card-bg-hover);
+                @include col(background, var(--catalog-card-bg-hover), $catalog-card-bg-hover);
             }
         }
         &__top {
@@ -106,7 +106,7 @@
                     z-index: 999;
                     cursor: pointer;
                     svg {
-                        fill: var(--text-color);
+                        @include col(fill, var(--text-color), $text-color);
                     }
                 }
             }
@@ -127,19 +127,19 @@
         &__title {
             text-align: center;
             &__name {
-                color: var(--text-color);
+                @include col(color, var(--text-color), $text-color);
                 font-size: 18px;
                 margin-bottom: 10px;
             }
             &__art {
-                color: var(--footer-text);
+                @include col(color, var(--footer-text), $footer-text);
             }
         }
     }
 }
 
 .item {
-    background: var(--item-bg);
+    @include col(background, var(--item-bg), $item-bg);
     padding-bottom: 0;
     &.is--carousel {
         padding-top: 100px;
@@ -194,7 +194,7 @@
                             cursor: pointer;
                             display: block;
                             font-size: 24px;
-                            color: var(--text-color);
+                            @include col(color, var(--text-color), $text-color);
                             padding: 13px 25px;
                             border-radius: 102px;
                             border: 3px solid transparent;
@@ -221,7 +221,7 @@
                     font-size: 18px;
                     margin-bottom: 6px;
                     span {
-                        background: var(--item-bg);
+                        @include col(background, var(--item-bg), $item-bg);
                         display: inline-block;
                         z-index: 10;
                     }
@@ -278,7 +278,7 @@
                             &.is--active {
                                 a {
                                     border-color: $c-primary;
-                                    color: var(--text-color);
+                                    @include col(color, var(--text-color), $text-color);
                                 }
                             }
                         }
@@ -317,7 +317,7 @@
                     }
                 }
                 &__right {
-                    color: var(--text-color);
+                    @include col(color, var(--text-color), $text-color);
                     font-size: 18px;
                 }
             }
@@ -327,8 +327,8 @@
 
 .item-basket {
     padding: 50px 0;
-    border-top: 1px solid var(--item-borders);
-    border-bottom: 1px solid var(--item-borders);
+    @include colBorder(border-top, 1px, solid, var(--item-borders), $item-borders);
+    @include colBorder(border-bottom, 1px, solid, var(--item-borders), $item-borders);
     &__line {
         display: flex;
         &__left,
@@ -369,7 +369,7 @@
                     background: transparent;
                     border: none;
                     padding: 0;
-                    color: var(--text-color);
+                    @include col(color, var(--text-color), $text-color);
                     font-size: 24px;
                     padding-left: 10px;
                     padding-right: 10px;
@@ -383,7 +383,7 @@
                     display: block;
                     padding: 0;
                     svg {
-                        fill: var(--text-color);
+                        @include col(fill, var(--text-color), $text-color);
                     }
                 }
             }

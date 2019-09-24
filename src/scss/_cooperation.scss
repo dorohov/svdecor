@@ -20,7 +20,7 @@
     }
     &__top {
         padding-bottom: 100px;
-        border-bottom: 1px solid var(--navbar-border-color);
+        @include colBorder(border-bottom, 1px, solid, var(--navbar-border-color), $navbar-border-color);
     }
     &__bottom {
         padding: 100px 0 20px 0;
