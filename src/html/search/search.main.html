@@ -1,0 +1,40 @@
+<div class="search page">
+    <div class="search__inner container">
+        @@include('../components/component.breadcrumbs.html', {
+            "list": [
+                {
+                    "title": "Главная",
+                    "url": "@@pages.index"
+                }
+            ],
+            "current": "Контакты"
+        })
+        <div class="heading">
+            <div class="heading__text">Результаты поиска</div>
+        </div>
+        <div class="search__list">
+            @@include('search.line.html', {
+                "title": "Гипсовый светильник <br> SV 7213",
+                "img": "cat1.png",
+                "price": "560",
+                "art": "7175",
+                "color": "white"
+            })
+            @@include('search.line.html', {
+                "title": "Гипсовый светильник <br> SV 7213",
+                "img": "cat2.png",
+                "price": "560",
+                "art": "7175",
+                "color": "blue"
+            })
+            @@include('search.line.html', {
+                "title": "Гипсовый светильник <br> SV 7213",
+                "img": "cat3.png",
+                "price": "560",
+                "art": "7175",
+                "color": "yellow"
+            })
+        </div>
+        @@include('../components/component.pagination.html')
+    </div>
+</div>

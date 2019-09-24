@@ -352,6 +352,42 @@
     }
 }
 
+.photolist {
+    &__inner {
+        display: flex;
+        margin: 0 -15px;
+        flex-wrap: wrap;
+    }
+    &__block {
+        max-width: 33.33333333%;
+        width: 100%;
+        padding: 0 15px;
+        &__inner {
+            overflow: hidden;
+        }
+        img {
+            transition: .25s all ease;
+            transform: scale(1.02);
+            &:hover {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+.about,
+.search {
+    .heading {
+        margin-bottom: 55px;
+    }
+}
+
+.search {
+    &__list {
+        margin-bottom: 80px;
+    }
+}
+
 @media (max-width: 1200px) {
     .page {
         padding: 110px 0 50px 0;
@@ -441,6 +477,26 @@
                     }
                 }
             }
+        }
+    }
+    .about,
+    .search {
+        .heading {
+            margin-bottom: 30px;
+        }
+    }
+    .search {
+        &__list {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .photolist {
+        &__block {
+            max-width: 100%;
+            margin-bottom: 15px;
         }
     }
 }

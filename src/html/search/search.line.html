@@ -1,0 +1,26 @@
+<div class="basket__line is--search">
+    <div class="basket__line__inner">
+        <div class="basket__line__left">
+            <div class="basket__line__img">
+                <a href="@@pages.item">
+                    <img src="img/@@img" alt="">
+                </a>
+            </div>
+            <div class="basket__line__title">
+                <div class="basket__line__title__name">@@title</div>
+            </div>
+        </div>
+        <div class="basket__line__right">
+            <div class="basket__line__art">Артикул @@art</div>
+            <div class="basket__line__inbask">
+                @@include('../components/component.button.html', {
+                    "icon": "bag",
+                    "text": "В корзину",
+                    "type": "link",
+                    "href": "#"
+                })
+            </div>
+            <div class="basket__line__price">@@price ₽</div>
+        </div>
+    </div>
+</div>

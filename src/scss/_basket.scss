@@ -18,7 +18,7 @@
         width: 35.8vw;
         min-width: 35.8vw;
         max-width: 35.8vw;
-        background: var(--contacts-right-bg);
+        @include col(background, var(--contacts-right-bg), $contacts-right-bg);
         display: flex;
         align-items: center;
         padding: 50px 30px 50px 130px;
@@ -29,7 +29,18 @@
     &__line {
         padding: 35px 0;
         margin-bottom: 15px;
-        border-bottom: 1px solid var(--text-color);
+        @include colBorder(border-bottom, 1px, solid, var(--text-color), $text-color);
+        position: relative;
+        &.is--search {
+            .basket {
+                &__line {
+                    &__right {
+                        justify-content: space-between;
+                        margin-left: 7vw;
+                    }
+                }
+            }
+        }
         &__left,
         &__right {
             display: flex;
@@ -41,6 +52,9 @@
         &__right {
             margin-left: auto;
             width: 100%;
+        }
+        &__art {
+            color: #AFAFAF;
         }
         &:last-child {
             margin-bottom: 0;
@@ -88,7 +102,7 @@
                 align-items: center;
                 input {
                     font-size: 24px;
-                    color: var(--text-color);
+                    @include col(color, var(--text-color), $text-color);
                     background: none;
                     text-align: center;
                     border: 0;
@@ -102,13 +116,25 @@
                     border: none;
                     cursor: pointer;
                     svg {
-                        fill: var(--text-color);
+                        @include col(fill, var(--text-color), $text-color);
                     }
                 }
             }
         }
         &__price {
             font-size: 24px;
+        }
+        &__remove {
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            margin-top: -10px;
+            button {
+                border: none;
+                background: none;
+                padding: 0;
+                cursor: pointer;
+            }
         }
     }
     &__total {
@@ -136,6 +162,22 @@
         }
         .form-submit {
             padding-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 1700px) {
+    .basket {
+        &__line {
+            &__remove {
+                left: -15px;
+                button {
+                    img {
+                        width: 12px;
+                        height: auto;
+                    }
+                }
+            }
         }
     }
 }
@@ -180,6 +222,20 @@
             }
             .form-submit {
                 padding-top: 0;
+            }
+        }
+        &__line {
+            &.is--search {
+                .basket__line {
+                    &__right {
+                        margin-left: 0;
+                    }
+                    &__inbask {
+                        .btn {
+                            padding: 16px 13px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -262,6 +318,14 @@
                 width: 100%;
                 display: flex;
                 justify-content: center;
+            }
+            &.is--search {
+                .basket__line {
+                    &__inbask {
+                        padding: 20px 0;
+                        width: 100%;
+                    }
+                }
             }
         }
     }

@@ -190,6 +190,21 @@
                     top: calc(100% + 20px);
                     right: -25px;
                 }
+                span.is--label {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background: #E1323D;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100%;
+                    right: -15px;
+                    top: -12px;
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: #fff;
+                }
             }
             &.is--right {
                 li {
@@ -245,7 +260,7 @@
         height: 100vh;
         right: 0;
         top: 0;
-        z-index: 9999;
+        z-index: 999;
         transition: .9s transform cubic-bezier(.99,.01,0,1);
         transform: rotate(-90deg);
         transform-style: preserve-3D;

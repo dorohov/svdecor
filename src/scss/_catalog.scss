@@ -54,7 +54,7 @@
                         transition: .25s all ease;
                         &:hover,
                         &.is--active {
-                            color: var(--text-color);
+                            @include col(color, var(--text-color), $text-color);
                             border-color: $c-primary;
                         }
                     }

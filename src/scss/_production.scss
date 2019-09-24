@@ -149,6 +149,12 @@
     }
 }
 
+.studio {
+    .heading {
+        margin-bottom: 55px;
+    }
+}
+
 @media (max-width: 1915px) {
     .production-dot,
     .production__inner {
@@ -224,7 +230,8 @@
 }
 
 @media (max-width: 768px) {
-    .production {
+    .production,
+    .studio {
         .heading {
             margin-bottom: 30px;
         }

@@ -3,6 +3,7 @@ $c-primary: #7B5F54;
 body {
     @include col(background-color, var(--main-bg), $main-bg);
     color: var(--text-color);
+    @include col(color, var(--text-color), $text-color);
     font-family: 'Futura PT';
     &.is--white {
         .basket__line__color__circle span.is--bg-white {
@@ -72,6 +73,9 @@ input[type=number]::-webkit-outer-spin-button {
 .is--mb60 {
     margin-bottom: 60px !important;
 }
+.is--mb80 {
+    margin-bottom: 80px !important;
+}
 .is--mb120 {
     margin-bottom: 120px !important;
 }
@@ -83,6 +87,25 @@ input[type=number]::-webkit-outer-spin-button {
         margin: 0 0 20px 0;
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+    ul {
+        margin: 0 0 20px 0;
+        font-size: 18px;
+        line-height: 112.5%;
+        li {
+            padding-left: 15px;
+            position: relative;
+            &::before {
+                content: '';
+                width: 8px;
+                height: 8px;
+                position: absolute;
+                background: $c-primary;
+                border-radius: 100%;
+                top: 6px;
+                left: 0;
+            }
         }
     }
     ul {
@@ -127,6 +150,9 @@ input[type=number]::-webkit-outer-spin-button {
     .is--mb60 {
         margin-bottom: 30px;
     }
+    .is--mb80 {
+        margin-bottom: 40px;
+    }
     .is--mb120 {
         margin-bottom: 60px;
     }
@@ -150,12 +176,18 @@ input[type=number]::-webkit-outer-spin-button {
                 margin-bottom: 30px;
             }
         }
+        ul {
+            font-size: 16px;
+        }
     }
     .is--mb40 {
         margin-bottom: 10px !important;
     }
     .is--mb60 {
         margin-bottom: 15px !important;
+    }
+    .is--mb80 {
+        margin-bottom: 20px !important;
     }
     .is--mb120 {
         margin-bottom: 30px !important;
