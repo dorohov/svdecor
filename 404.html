@@ -59,7 +59,7 @@
             </div>
             <div class="navbar__right">
                 <ul class="iconset is--right">
-                    <li>
+                    <li class="is--iehide">
                         <button type="button" onclick="changeColor();"><svg class="svg-light-dims svg is--light">
                                 <use xlink:href="img/svg/sprites.svg#light"></use>
                             </svg></button>
@@ -110,7 +110,7 @@
                                 <use xlink:href="img/svg/sprites.svg#search"></use>
                             </svg></button>
                     </li>
-                    <li class="is--ml">
+                    <li class="is--ml is--iehide">
                         <button type="button" onclick="changeColor();"><svg class="svg-light-dims svg is--light">
                                 <use xlink:href="img/svg/sprites.svg#light"></use>
                             </svg></button>
@@ -228,11 +228,26 @@
             </div>
         </div>
     </footer>
+    <div id="modal_form" class="modal">
+        <div class="modal__heading">Ваше сообщение отправлено!</div>
+        <div class="modal__btn">
+            <a href="#" class="btn" rel="modal:close">
+                <span class="is--icon">
+                    <svg class="svg-next-dims svg is--next">
+                        <use xlink:href="img/svg/sprites.svg#next"></use>
+                    </svg>
+                </span>
+                <span class="is--text">Закрыть</span>
+            </a>
+        </div>
+    </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
     <script src="dist/js/svg4everybody.min.js"></script>
     <script src="dist/js/jquery.fancybox.min.js"></script>
     <script src="dist/js/slick.min.js"></script>
+    <script src="dist/js/jquery.modal.min.js"></script>
     <script src="dist/js/main.js"></script>
+    <script src="dist/js/color_system.js"></script>
     <script>
         svg4everybody();
     </script>

@@ -1,12 +1,12 @@
 .error {
-    background: var(--footer-bg);
+    @include col(background, var(--footer-bg), $footer-bg);
     position: relative;
     display: flex;
     align-items: center;
     min-height: 100vh;
     &::after {
         content: '';
-        background: var(--main-bg);
+        @include col(background, var(--main-bg), $main-bg);
         width: 34.4vw;
         height: 100%;
         position: absolute;

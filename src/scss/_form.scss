@@ -1,5 +1,5 @@
 .form {
-    background: var(--form-c1-bg);
+    @include col(background, var(--form-c1-bg), $form-c1-bg);
     padding: 130px 0 120px 0;
     .heading {
         margin-bottom: 90px;
@@ -31,19 +31,22 @@
             box-sizing: border-box;
             display: block;
             border: 0;
-            border-bottom: 1px solid var(--form-field);
+            @include colBorder(border-bottom, 1px, solid, var(--form-field), $form-field);
             background: transparent;
             padding: 10px 0 20px 0;
-            color: var(--text-color);
+            @include col(color, var(--text-color), $text-color);
             &:not(:placeholder-shown) + label,
             &:focus + label {
                 bottom: 50px;
                 cursor: default;
                 transform: scale(0.9) translateX(-5px);
             }
+            &::placeholder {
+                color: transparent;
+            }
         }
         label {
-            color: var(--form-field-text);
+            @include col(color, var(--form-field-text), $form-field-text);
             display: block;
             position: absolute;
             bottom: 23px;
@@ -61,9 +64,11 @@
                 position: static;
                 width: 100%;
                 box-sizing: border-box;
-                border-bottom: 1px solid var(--form-field);
+                @include colBorder(border-bottom, 1px, solid, var(--form-field), $form-field);
                 background: transparent;
                 padding: 10px 0 20px 0;
+                opacity: 1 !important;
+                visibility: visible !important;
             }
         }
     }
@@ -80,7 +85,7 @@
         a {
             font-weight: 500;
             transition: .25s all ease;
-            color: var(--text-color);
+            @include col(color, var(--text-color), $text-color);
             &:hover {
                 color: $c-primary;
             }
@@ -97,10 +102,10 @@
             white-space: nowrap;
             svg {
                 margin-right: 12px;
-                fill: var(--text-color);
+                @include col(fill, var(--text-color), $text-color);
             }
             span {
-                color: var(--text-color);
+                @include col(color, var(--text-color), $text-color);
             }
         }
     }
@@ -162,7 +167,7 @@
             display: none;
             &:checked + label {
                 border-color: $c-primary;
-                color: var(--text-color);
+                @include col(color, var(--text-color), $text-color);
             }
         }
         label {

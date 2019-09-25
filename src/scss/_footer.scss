@@ -1,5 +1,5 @@
 .footer {
-    background: var(--footer-bg);
+    @include col(background, var(--footer-bg), $footer-bg);
     padding: 75px 30px 35px 30px;
     &__top {
         text-align: center;
@@ -9,7 +9,7 @@
                 svg {
                     width: 118px;
                     height: 80px;
-                    fill: var(--text-color);
+                    @include col(fill, var(--text-color), $text-color);
                 }
             }
         }
@@ -27,7 +27,7 @@
                     display: block;
                     transition: .25s all ease;
                     &:hover {
-                        color: var(--text-color);
+                        @include col(color, var(--text-color), $text-color);
                     }
                 }
             }
@@ -41,7 +41,7 @@
     &__cop {
         text-align: center;
         margin-bottom: 55px;
-        color: var(--footer-text);
+        @include col(color, var(--footer-text), $footer-text);
     }
     &__dorohov {
         display: flex;
@@ -52,7 +52,7 @@
         }
         &__left {
             margin-right: 8px;
-            color: var(--footer-text);
+            @include col(color, var(--footer-text), $footer-text);
             user-select: none;
         }
         &__right {

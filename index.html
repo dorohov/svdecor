@@ -59,7 +59,7 @@
             </div>
             <div class="navbar__right">
                 <ul class="iconset is--right">
-                    <li>
+                    <li class="is--iehide">
                         <button type="button" onclick="changeColor();"><svg class="svg-light-dims svg is--light">
                                 <use xlink:href="img/svg/sprites.svg#light"></use>
                             </svg></button>
@@ -110,7 +110,7 @@
                                 <use xlink:href="img/svg/sprites.svg#search"></use>
                             </svg></button>
                     </li>
-                    <li class="is--ml">
+                    <li class="is--ml is--iehide">
                         <button type="button" onclick="changeColor();"><svg class="svg-light-dims svg is--light">
                                 <use xlink:href="img/svg/sprites.svg#light"></use>
                             </svg></button>
@@ -294,18 +294,18 @@
                             </a>
                         </div>
                         <div class="banner__footer__scroll">
-                            <button class="banner__footer__scroll__inner">
+                            <a href="#ic" class="banner__footer__scroll__inner anchor">
                                 <div class="banner__footer__scroll__line">
                                     <span></span>
                                 </div>
                                 <div class="banner__footer__scroll__text">scroll</div>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="in-categories">
+        <div class="in-categories" id="ic">
             <div class="in-categories__inner container">
                 <div class="heading">
                     <div class="heading__text">Категории</div>
@@ -510,11 +510,11 @@
                             <form class="in-td__form__blocks">
                                 <div class="form-fields">
                                     <div class="form-field is--w50">
-                                        <input type="text" name="td_name" id="td_name" required placeholder="&nbsp;">
+                                        <input type="text" name="td_name" id="td_name" required placeholder="Имя" required>
                                         <label for="td_name">Ваше имя</label>
                                     </div>
                                     <div class="form-field is--w50">
-                                        <input type="text" name="td_phone" id="td_phone" required placeholder="&nbsp;">
+                                        <input type="text" name="td_phone" id="td_phone" required placeholder="Телефон" required>
                                         <label for="td_phone">Номер телефона</label>
                                     </div>
                                     <div class="form-submit">
@@ -612,11 +612,26 @@
             </div>
         </div>
     </footer>
+    <div id="modal_form" class="modal">
+        <div class="modal__heading">Ваше сообщение отправлено!</div>
+        <div class="modal__btn">
+            <a href="#" class="btn" rel="modal:close">
+                <span class="is--icon">
+                    <svg class="svg-next-dims svg is--next">
+                        <use xlink:href="img/svg/sprites.svg#next"></use>
+                    </svg>
+                </span>
+                <span class="is--text">Закрыть</span>
+            </a>
+        </div>
+    </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
     <script src="dist/js/svg4everybody.min.js"></script>
     <script src="dist/js/jquery.fancybox.min.js"></script>
     <script src="dist/js/slick.min.js"></script>
+    <script src="dist/js/jquery.modal.min.js"></script>
     <script src="dist/js/main.js"></script>
+    <script src="dist/js/color_system.js"></script>
     <script>
         svg4everybody();
     </script>

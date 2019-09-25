@@ -5,7 +5,7 @@
         &::after {
             width: 1px;
             height: 100%;
-            background: var(--navbar-border-color);
+            @include col(background, var(--navbar-border-color), $navbar-border-color);
             content: '';
             position: absolute;
             left: 100px;
@@ -19,8 +19,8 @@
 
 .production-cond {
     padding: 50px 0;
-    border-top: 1px solid var(--navbar-border-color);
-    border-bottom: 1px solid var(--navbar-border-color);
+    @include colBorder(border-top, 1px, solid, var(--navbar-border-color), $navbar-border-color);
+    @include colBorder(border-bottom, 1px, solid, var(--navbar-border-color), $navbar-border-color);
 }
 
 .production-stands {
@@ -67,7 +67,7 @@
 }
 
 .production-carousel {
-    background: var(--footer-bg);
+    @include col(background, var(--footer-bg), $footer-bg);
     &__inner {
         display: flex;
     }
@@ -132,14 +132,14 @@
     position: relative;
     &.is--on {
         &::after {
-            background: var(--text-color);
+            @include col(background, var(--text-color), $text-color);
         }
     }
     &::after {
         position: absolute;
         width: 16px;
         height: 16px;
-        background: var(--navbar-border-color);
+        @include col(background, var(--navbar-border-color), $navbar-border-color);
         top: 50%;
         margin-top: -8px;
         border-radius: 1px;

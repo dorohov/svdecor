@@ -21,7 +21,7 @@
         }
         &__inner {
             display: flex;
-            background: var(--catalog-card-bg);
+            @include col(background, var(--catalog-card-bg), $catalog-card-bg);
             padding: 80px 100px;
             align-items: center;
         }

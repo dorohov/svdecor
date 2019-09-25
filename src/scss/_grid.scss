@@ -8,8 +8,8 @@
 
 .message {
     position: absolute;
-    background-color: var(--text-color);
-    color: var(--main-bg);
+    @include col(background-color, var(--text-color), $text-color);
+    @include col(color, var(--main-bg), $main-bg);
     border-radius: 6px;
     white-space: nowrap;
     &::after {
@@ -22,7 +22,7 @@
         position: absolute;
         pointer-events: none;
         border-color: rgba(136, 183, 213, 0);
-        border-bottom-color: var(--text-color);
+        @include col(border-bottom-color, var(--text-color), $text-color);
         border-width: 11px;
         margin-left: -11px;
     }
@@ -34,7 +34,7 @@
     }
     &__btn {
         button {
-            color: var(--main-bg);
+            @include col(color, var(--main-bg), $main-bg);
             text-decoration: underline;
             &:hover {
                 background: linear-gradient(95.08deg, #7B5F54 12.76%, #5B433F 107.12%), #3E4148 !important;
@@ -114,7 +114,7 @@
             }
         }
         &.is--text {
-            color: var(--text-color);
+            @include col(color, var(--text-color), $text-color);
             font-weight: 450;
             font-size: 16px;
             line-height: 112.5%;
@@ -125,7 +125,7 @@
 }
 
 .heading {
-    color: var(--text-color);
+    @include col(color, var(--text-color), $text-color);
     &__text {
         font-weight: 450;
         font-size: 64px;
@@ -150,7 +150,7 @@
                 }
                 &.is--active {
                     a {
-                        color: var(--text-color);
+                        @include col(color, var(--text-color), $text-color);
                         border-color: $c-primary;
                     }
                 }
@@ -175,7 +175,7 @@
             font-size: 14px;
             padding-right: 5px;
             font-weight: 500;
-            color: var(--text-color);
+            @include col(color, var(--text-color), $text-color);
             a { 
                 white-space: nowrap;
                 transition: .25s all ease;
@@ -222,20 +222,20 @@
         .dropdown {
             &__title {
                 font-size: 18px;
-                color: var(--text-color);
+                @include col(color, var(--text-color), $text-color);
                 display: flex;
                 align-items: center;
                 cursor: pointer;
                 svg {
                     margin-top: 3px;
                     margin-left: 12px;
-                    fill: var(--text-color);
+                    @include col(fill, var(--text-color), $text-color);
                 }
             }
             &__list {
                 padding-top: 20px;
                 &__inner {
-                    background-color: var(--text-color);
+                    @include col(background-color, var(--text-color), $text-color);
                     padding: 10px 15px;
                     border-radius: 6px;
                     &::after {
@@ -250,13 +250,13 @@
                         position: absolute;
                         pointer-events: none;
                         border-color: rgba(136, 183, 213, 0);
-                        border-bottom-color: var(--text-color);
+                        @include col(border-bottom-color, var(--text-color), $text-color);
                         border-width: 11px;
                     }
                     ul {
                         li {
                             a {
-                                color: var(--main-bg);
+                                @include col(color, var(--main-bg), $main-bg);
                                 white-space: nowrap;
                                 display: block;
                                 padding: 5px 0;
@@ -308,7 +308,7 @@
                 }
                 a, span {
                     font-size: 18px;
-                    color: var(--text-color);
+                    @include col(color, var(--text-color), $text-color);
                 }
                 &.is--last {
                     margin-left: 20px;
