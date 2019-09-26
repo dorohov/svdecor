@@ -3,7 +3,7 @@
     $(function() {
         
         if($('.banner').length > 0) {
-            var listItem = '<li data-id="%id"><a class="banner__footer__list__block"><div class="banner__footer__list__block__title">%title</div><div class="banner__footer__list__block__price">%price ₽</div></a></li>';
+            var listItem = '<li data-id="%id"><a class="banner__footer__list__block"><div class="banner__footer__list__block__title is--typer_fb--on">%title</div><div class="banner__footer__list__block__price is--typer_fb--tw">%price ₽</div></a></li>';
             var listTotal = $('.banner__content__list__item');
             var currentSlider = 1
             var isSlide = true
@@ -29,25 +29,27 @@
                 if(isSlide) {
                     isSlide = false
                     currentSlider = id
-                    console.log('сейчас активен слайд ', currentSlider)
+
                     $('.banner__content__list__item').removeClass('is--active');
                     $('.banner__content__list__item:not([data-id="' + id + '"])').addClass('is--clos');
                     $('.banner__content__list__item[data-id="' + id + '"]').addClass('is--active')
 
                     $('.banner__footer__list li').removeClass('is--active')
-                    $('.banner__footer__list li[data-id="' + currentSlider + '"]').addClass('is--active')
-                    $('.banner__footer__list li[data-id="' + (currentSlider + 1) + '"]').addClass('is--active')
+                    $('.banner__footer__list li[data-id="' + currentSlider + '"]').addClass('is--active is--clos animated fadeInRight')
+                    $('.banner__footer__list li[data-id="' + (currentSlider + 1) + '"]').addClass('is--active is--clos animated fadeInRight')
                     
+
                     if(currentSlider >= $('.banner__content__list__item').length) {
-                        $('.banner__footer__list li[data-id="' + 1 + '"]').addClass('is--active')
+                        $('.banner__footer__list li[data-id="' + 1 + '"]').addClass('is--active animated fadeInRight')
                     }
 
                     setTimeout(function() {
                         $('.banner__content__list__item').removeClass('is--clos')
+                        $('.banner__footer__list li').removeClass('is--clos animated fadeInRight')
                         setTimeout(function() {
                             isSlide = true
-                        }, 500)
-                    }, 1600)
+                        }, 600)
+                    }, 1500)
                 }
             }
 

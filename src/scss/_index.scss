@@ -39,6 +39,7 @@
                                     &__right {
                                         opacity: 1;
                                         transform: translateX(0);
+                                        transition: 1.5s all ease;
                                     }
                                 }
                             }
@@ -52,6 +53,7 @@
                             &__left,
                             &__right {
                                 transform: translateX(100%);
+                                transition: 1.5s all ease;
                             }
                         }
                     }
@@ -69,7 +71,6 @@
                 &__right {
                     opacity: 0;
                     transform: translateX(-100%);
-                    transition: 1.5s all ease;
                 }
                 &__right {
                     transition: 1.5s all ease;
@@ -123,9 +124,13 @@
                 align-items: center;
                 li {
                     margin-right: 90px;
+                    transition: .5s all ease;
+                    width: 150px;
                     display: none;
+                    opacity: 0;
                     &.is--active {
                         display: block;
+                        opacity: 1;
                     }
                 }
             }
