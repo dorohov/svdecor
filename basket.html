@@ -100,10 +100,18 @@
                     <li class="is--ml"><a href="production.html">Производство</a></li>
                     <li class="is--ml"><a href="studio.html">Студия света</a></li>
                     <li class="is--ml"><a href="about.html">О магазине</a></li>
+                    <li class="is--ml"><a href="delivery.html#delivery_points">Пункты выдачи</a></li>
+                    <li class="is--ml"><a href="delivery.html">Доставка</a></li>
+                    <li class="is--ml"><a href="pay.html">Оплата</a></li>
                     <li class="is--ml"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
             <div class="navbar__aside__btns">
+                <div class="navbar__aside__btns__search">
+                    <form action="">
+                        <input type="text" placeholder="Поиск">
+                    </form>
+                </div>
                 <ul>
                     <li class="is--ml">
                         <button id="openMobileSearch"><svg class="svg-search-dims svg is--search">
@@ -123,11 +131,6 @@
                         </a>
                     </li>
                 </ul>
-                <div class="navbar__aside__btns__search">
-                    <form action="">
-                        <input type="text" placeholder="Поиск">
-                    </form>
-                </div>
             </div>
         </div>
     </div>
@@ -186,7 +189,9 @@
                                 </div>
                             </div>
                             <div class="basket__line__remove">
-                                <button><img src="img/remove.svg" alt=""></button>
+                                <button><svg class="svg-remove-dims svg is--remove">
+                                        <use xlink:href="img/svg/sprites.svg#remove"></use>
+                                    </svg></button>
                             </div>
                         </div>
                         <div class="basket__line">
@@ -228,7 +233,9 @@
                                 </div>
                             </div>
                             <div class="basket__line__remove">
-                                <button><img src="img/remove.svg" alt=""></button>
+                                <button><svg class="svg-remove-dims svg is--remove">
+                                        <use xlink:href="img/svg/sprites.svg#remove"></use>
+                                    </svg></button>
                             </div>
                         </div>
                         <div class="basket__line">
@@ -270,7 +277,9 @@
                                 </div>
                             </div>
                             <div class="basket__line__remove">
-                                <button><img src="img/remove.svg" alt=""></button>
+                                <button><svg class="svg-remove-dims svg is--remove">
+                                        <use xlink:href="img/svg/sprites.svg#remove"></use>
+                                    </svg></button>
                             </div>
                         </div>
                     </div>
@@ -287,12 +296,12 @@
                             <div class="basket__form__heading">Быстрый заказ</div>
                             <div class="form-fields">
                                 <div class="form-field is--w100">
-                                    <input type="text" name="f_name" id="f_name" placeholder="&nbsp;">
+                                    <input type="text" name="f_name" id="f_name" placeholder="Ваше имя">
                                     <label for="f_name">Ваше имя</label>
                                 </div>
                                 <div class="form-field is--w100">
-                                    <input type="text" name="f_phone" id="f_phone" placeholder="&nbsp;">
-                                    <label for="f_phone">Ваш телефон</label>
+                                    <input type="text" name="f_phone" id="f_phone" placeholder="Номер телефона" class="input-phone">
+                                    <label for="f_phone">Номер телефона</label>
                                 </div>
                                 <div class="form-submit">
                                     <button type="submit" class="btn">
@@ -393,7 +402,7 @@
         </div>
     </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
-    <script src="dist/js/bundle-min.js"></script>
+    <script src="dist/js/bundle.js"></script>
     <script>
         svg4everybody();
     </script>

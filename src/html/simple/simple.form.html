@@ -10,7 +10,7 @@
                     <label for="f_name">Ваше имя</label>
                 </div>
                 <div class="form-field is--w25">
-                    <input type="text" name="f_phone" id="f_phone" placeholder="Телефон">
+                    <input type="text" name="f_phone" id="f_phone" placeholder="Телефон" class="input-phone">
                     <label for="f_phone">Номер телефона</label>
                 </div>
                 <div class="form-field is--w25">
@@ -18,9 +18,9 @@
                     <label for="f_email">Ваш e - mail</label>
                 </div>
                 <div class="form-field is--w25">
-                    <div class="form-field-file">
+                    <div class="form-field-file is--file-form">
                         <input type="file" name="f_file" id="f_file">
-                        <label for="f_file">Прикрепить файл</label>
+                        <label for="f_file" class="is--label">Прикрепить файл</label>
                     </div>
                 </div>
                 <div class="form-submit">
@@ -28,10 +28,10 @@
                         <span class="is--icon">
                             @@include('../components/component.svg.html', {"name": "next"})
                         </span>
-                        <span class="is--text">заказать</span>
+                        <span class="is--text">Заказать</span>
                     </button>
                     <div class="form-cop">
-                        Нажимая на кнопку «Отправить», Вы соглашаетесь с <a href="#">политикой обработки персональных данных</a>
+                        Нажимая на кнопку «Заказать», Вы соглашаетесь с <a href="#">политикой обработки персональных данных</a>
                     </div>
                 </div>
             </div>

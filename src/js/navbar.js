@@ -44,11 +44,13 @@
         function openMobileMenu() {
             $('.navbar__mobile button').addClass('is-active')
             $('.navbar__aside').addClass('is--open')
+            $('body').addClass('is--menu-open')
         }
 
         function closeMobileMenu() {
             $('.navbar__mobile button').removeClass('is-active')
             $('.navbar__aside').removeClass('is--open')
+            $('body').removeClass('is--menu-open')
         }
 
         function toggleNavbar() {

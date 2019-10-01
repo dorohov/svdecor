@@ -78,15 +78,28 @@
                     </div>
                 </div>
             </div>
-            <div class="item-bulb__price">
-                <div class="item-bulb__price__num">Цена: 200 ₽</div>
-                <div class="item-bulb__price__btn">
-                    @@include('../components/component.button.html', {
-                        "icon": "bask_btn",
-                        "text": "В корзину",
-                        "type": "submit",
-                        "href": "#"
-                    })
+            <div class="item-bulb__rightt">
+                <div class="item-bulb__count">
+                    <div class="item-basket__line__count__inner counter">
+                        <button class="is--minus" type="button" data-action="minus">
+                            @@include('../components/component.svg.html', {"name": "c_minus"})
+                        </button>
+                        <input type="number" value="1" max="9999" min="1">
+                        <button class="is--plus" type="button" data-action="plus">
+                            @@include('../components/component.svg.html', {"name": "c_plus"})
+                        </button>
+                    </div>
+                </div>
+                <div class="item-bulb__price">
+                    <div class="item-bulb__price__num">Цена: 200 ₽</div>
+                    <div class="item-bulb__price__btn">
+                        @@include('../components/component.button.html', {
+                            "icon": "bask_btn",
+                            "text": "В корзину",
+                            "type": "submit",
+                            "href": "#"
+                        })
+                    </div>
                 </div>
             </div>
         </form>

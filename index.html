@@ -100,10 +100,18 @@
                     <li class="is--ml"><a href="production.html">Производство</a></li>
                     <li class="is--ml"><a href="studio.html">Студия света</a></li>
                     <li class="is--ml"><a href="about.html">О магазине</a></li>
+                    <li class="is--ml"><a href="delivery.html#delivery_points">Пункты выдачи</a></li>
+                    <li class="is--ml"><a href="delivery.html">Доставка</a></li>
+                    <li class="is--ml"><a href="pay.html">Оплата</a></li>
                     <li class="is--ml"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
             <div class="navbar__aside__btns">
+                <div class="navbar__aside__btns__search">
+                    <form action="">
+                        <input type="text" placeholder="Поиск">
+                    </form>
+                </div>
                 <ul>
                     <li class="is--ml">
                         <button id="openMobileSearch"><svg class="svg-search-dims svg is--search">
@@ -123,11 +131,6 @@
                         </a>
                     </li>
                 </ul>
-                <div class="navbar__aside__btns__search">
-                    <form action="">
-                        <input type="text" placeholder="Поиск">
-                    </form>
-                </div>
             </div>
         </div>
     </div>
@@ -548,7 +551,7 @@
                                         <label for="td_name">Ваше имя</label>
                                     </div>
                                     <div class="form-field is--w50">
-                                        <input type="text" name="td_phone" id="td_phone" required placeholder="Телефон" required>
+                                        <input type="text" name="td_phone" id="td_phone" required placeholder="Телефон" class="input-phone" required>
                                         <label for="td_phone">Номер телефона</label>
                                     </div>
                                     <div class="form-submit">
@@ -560,13 +563,13 @@
                                             </span>
                                             <span class="is--text">Запрос</span>
                                         </button>
-                                        <div class="form-file">
+                                        <div class="form-file is--file-form">
                                             <input type="file" name="td_file" id="td_file">
                                             <label for="td_file">
                                                 <svg class="svg-clip-dims svg is--clip">
                                                     <use xlink:href="img/svg/sprites.svg#clip"></use>
                                                 </svg>
-                                                <span>Выберите файл</span>
+                                                <span class="is--label">Выберите файл</span>
                                             </label>
                                         </div>
                                     </div>
@@ -660,7 +663,7 @@
         </div>
     </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
-    <script src="dist/js/bundle-min.js"></script>
+    <script src="dist/js/bundle.js"></script>
     <script>
         svg4everybody();
     </script>

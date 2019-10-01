@@ -149,12 +149,15 @@ function createBundleJs() {
                 './dist/js/jquery.fancybox.min.js',
                 './dist/js/slick.min.js',
                 './dist/js/jquery.modal.min.js',
+                './dist/js/parsley.min.js',
+                './dist/js/i18n/ru.js',
+                './dist/js/imask.js',
                 './dist/js/main.js',
                 './dist/js/color_system.js'
             ])
             .pipe(sourcemaps.init())
             .pipe(concat('bundle.js'))
-            .pipe(minify())
+            // .pipe(minify())
             .pipe(gulp.dest('dist/js'))
             .on('end', browserSync.reload)
 }

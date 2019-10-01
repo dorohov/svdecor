@@ -35,9 +35,11 @@
             background: transparent;
             padding: 10px 0 20px 0;
             @include col(color, var(--text-color), $text-color);
-            &:not(:placeholder-shown) + label,
-            &:focus + label {
-                bottom: 50px;
+            &:not(:placeholder-shown) ~ label,
+            &:focus ~ label,
+            &:not(:empty) {
+                top: -15px;
+                bottom: auto;
                 cursor: default;
                 transform: scale(0.9) translateX(-5px);
             }
@@ -49,7 +51,7 @@
             @include col(color, var(--form-field-text), $form-field-text);
             display: block;
             position: absolute;
-            bottom: 23px;
+            top: 5px;
             cursor: text;
             transition: .25s all ease;
             user-select: none;
@@ -180,6 +182,32 @@
             transition: .25s all ease;
             display: inline-block;
             user-select: none;
+        }
+    }
+}
+
+.parsley-errors-list.filled {
+    position: absolute;
+    left: 23px;
+    top: calc(100% + 15px);
+    @include col(background-color, var(--text-color), $text-color);
+    @include col(color, var(--main-bg), $main-bg);
+    padding: 5px 10px;
+    &::after {
+        bottom: 100%;
+        left: 23px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(136, 183, 213, 0);
+        border-bottom-color: var(--text-color);
+        border-width: 10px;
+        margin-left: -10px;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            border-bottom-color: $text-color;
         }
     }
 }

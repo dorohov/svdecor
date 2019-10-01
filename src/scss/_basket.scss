@@ -106,6 +106,7 @@
                     background: none;
                     text-align: center;
                     border: 0;
+                    max-width: 73px;
                 }
                 button {
                     width: 16px;
@@ -134,6 +135,9 @@
                 background: none;
                 padding: 0;
                 cursor: pointer;
+                svg {
+                    @include col(fill, var(--text-color), $text-color);
+                }
             }
         }
     }

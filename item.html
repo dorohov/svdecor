@@ -100,10 +100,18 @@
                     <li class="is--ml"><a href="production.html">Производство</a></li>
                     <li class="is--ml"><a href="studio.html">Студия света</a></li>
                     <li class="is--ml"><a href="about.html">О магазине</a></li>
+                    <li class="is--ml"><a href="delivery.html#delivery_points">Пункты выдачи</a></li>
+                    <li class="is--ml"><a href="delivery.html">Доставка</a></li>
+                    <li class="is--ml"><a href="pay.html">Оплата</a></li>
                     <li class="is--ml"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
             <div class="navbar__aside__btns">
+                <div class="navbar__aside__btns__search">
+                    <form action="">
+                        <input type="text" placeholder="Поиск">
+                    </form>
+                </div>
                 <ul>
                     <li class="is--ml">
                         <button id="openMobileSearch"><svg class="svg-search-dims svg is--search">
@@ -123,11 +131,6 @@
                         </a>
                     </li>
                 </ul>
-                <div class="navbar__aside__btns__search">
-                    <form action="">
-                        <input type="text" placeholder="Поиск">
-                    </form>
-                </div>
             </div>
         </div>
     </div>
@@ -252,7 +255,7 @@
                                                                 <use xlink:href="img/svg/sprites.svg#next"></use>
                                                             </svg>
                                                         </span>
-                                                        <span class="is--text">заказать цвет</span>
+                                                        <span class="is--text">Выбор цвета</span>
 
 
                                                     </button>
@@ -432,23 +435,40 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item-bulb__price">
-                            <div class="item-bulb__price__num">Цена: 200 ₽</div>
-                            <div class="item-bulb__price__btn">
-
-
-                                <button class="btn">
-
-                                    <span class="is--icon">
-                                        <svg class="svg-bask_btn-dims svg is--bask_btn">
-                                            <use xlink:href="img/svg/sprites.svg#bask_btn"></use>
+                        <div class="item-bulb__rightt">
+                            <div class="item-bulb__count">
+                                <div class="item-basket__line__count__inner counter">
+                                    <button class="is--minus" type="button" data-action="minus">
+                                        <svg class="svg-c_minus-dims svg is--c_minus">
+                                            <use xlink:href="img/svg/sprites.svg#c_minus"></use>
                                         </svg>
-                                    </span>
-                                    <span class="is--text">В корзину</span>
+                                    </button>
+                                    <input type="number" value="1" max="9999" min="1">
+                                    <button class="is--plus" type="button" data-action="plus">
+                                        <svg class="svg-c_plus-dims svg is--c_plus">
+                                            <use xlink:href="img/svg/sprites.svg#c_plus"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="item-bulb__price">
+                                <div class="item-bulb__price__num">Цена: 200 ₽</div>
+                                <div class="item-bulb__price__btn">
 
 
-                                </button>
+                                    <button class="btn">
 
+                                        <span class="is--icon">
+                                            <svg class="svg-bask_btn-dims svg is--bask_btn">
+                                                <use xlink:href="img/svg/sprites.svg#bask_btn"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="is--text">В корзину</span>
+
+
+                                    </button>
+
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -466,7 +486,7 @@
                                 <label for="f_name">Ваше имя</label>
                             </div>
                             <div class="form-field is--w25">
-                                <input type="text" name="f_phone" id="f_phone" placeholder="Телефон">
+                                <input type="text" name="f_phone" id="f_phone" placeholder="Телефон" class="input-phone">
                                 <label for="f_phone">Номер телефона</label>
                             </div>
                             <div class="form-field is--w25">
@@ -474,9 +494,9 @@
                                 <label for="f_email">Ваш e - mail</label>
                             </div>
                             <div class="form-field is--w25">
-                                <div class="form-field-file">
+                                <div class="form-field-file is--file-form">
                                     <input type="file" name="f_file" id="f_file">
-                                    <label for="f_file">Прикрепить файл</label>
+                                    <label for="f_file" class="is--label">Прикрепить файл</label>
                                 </div>
                             </div>
                             <div class="form-submit">
@@ -486,10 +506,10 @@
                                             <use xlink:href="img/svg/sprites.svg#next"></use>
                                         </svg>
                                     </span>
-                                    <span class="is--text">заказать</span>
+                                    <span class="is--text">Заказать</span>
                                 </button>
                                 <div class="form-cop">
-                                    Нажимая на кнопку «Отправить», Вы соглашаетесь с <a href="#">политикой обработки персональных данных</a>
+                                    Нажимая на кнопку «Заказать», Вы соглашаетесь с <a href="#">политикой обработки персональных данных</a>
                                 </div>
                             </div>
                         </div>
@@ -580,7 +600,7 @@
         </div>
     </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
-    <script src="dist/js/bundle-min.js"></script>
+    <script src="dist/js/bundle.js"></script>
     <script>
         svg4everybody();
     </script>

@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     min-height: 100vh;
+    height: 1px;
     &::after {
         content: '';
         @include col(background, var(--main-bg), $main-bg);

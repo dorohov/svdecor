@@ -27,7 +27,7 @@
     }
     &.is--scroll {
         @include col(background, var(--main-bg), $main-bg);
-        @include colBorder(border-bottom, 1px, solid, var(--navbar-border-color), $navbar-border-color);
+        @include colBorderImp(border-bottom, 1px, solid, var(--navbar-border-color), $navbar-border-color);
         .navbar {
             &__logo {
                 padding: 0 35px;
@@ -66,6 +66,7 @@
         @include colBorder(border-bottom, 1px, solid, var(--navbar-border-color), $navbar-border-color);
     }
     &.is--transparent-border {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
         .navbar__menu ul li a {
             color: #fff;
         }
@@ -222,6 +223,7 @@
     }
     &__left {
         left: 30px;
+        top: 44%;
     }
     &__right {
         right: 30px;
@@ -275,11 +277,9 @@
         &__inner {
             width: 100vw;
             padding-top: 120px;
-            padding-left: 60px;
+            padding-left: 30px;
             @include col(color, var(--text-color), $text-color);
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
+            overflow: auto;
             .is--ml {
                 transform: translateY(15px);
                 transition: .7s all ease;
@@ -306,7 +306,7 @@
         }
         &__btns {
             width: 100%;
-            margin-top: auto;
+            padding-top: 30px;
             padding-bottom: 10vh;
             position: relative;
             padding-right: 30px;
@@ -339,6 +339,9 @@
                 &.is--open {
                     opacity: 1;
                     visibility: visible;
+                    & ~ ul {
+                        opacity: 0;
+                    }
                 }
                 form {
                     input[type="text"] {

@@ -1,5 +1,5 @@
 <div class="contacts__form">
-    <div class="contacts__form__inner">
+    <form class="contacts__form__inner">
         <div class="contacts__form__heading">Связь с администрацией</div>
         <div class="form-fields">
             <div class="form-field is--w100">
@@ -7,7 +7,7 @@
                 <label for="f_name">Ваше имя</label>
             </div>
             <div class="form-field is--w100">
-                <input type="text" name="f_email" id="f_email" placeholder="Почта" required>
+                <input type="email" name="f_email" id="f_email" placeholder="Почта" required>
                 <label for="f_email">Ваш email</label>
             </div>
             <div class="form-field is--w100">
@@ -15,11 +15,11 @@
                 <label for="f_text">Текст сообщения</label>
             </div>
             <div class="form-submit">
-                <div class="form-file">
+                <div class="form-file is--file-form">
                         <input type="file" name="td_file" id="td_file">
                         <label for="td_file">
                             @@include('../components/component.svg.html', {"name": "clip"})
-                            <span>Выберите файл</span>
+                            <span class="is--label">Выберите файл</span>
                         </label>
                     </div>
                 <button type="submit" class="btn">
@@ -30,5 +30,5 @@
                 </button>
             </div>
         </div>
-    </div>
+    </form>
 </div>

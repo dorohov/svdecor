@@ -100,10 +100,18 @@
                     <li class="is--ml"><a href="production.html">Производство</a></li>
                     <li class="is--ml"><a href="studio.html">Студия света</a></li>
                     <li class="is--ml"><a href="about.html">О магазине</a></li>
+                    <li class="is--ml"><a href="delivery.html#delivery_points">Пункты выдачи</a></li>
+                    <li class="is--ml"><a href="delivery.html">Доставка</a></li>
+                    <li class="is--ml"><a href="pay.html">Оплата</a></li>
                     <li class="is--ml"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
             <div class="navbar__aside__btns">
+                <div class="navbar__aside__btns__search">
+                    <form action="">
+                        <input type="text" placeholder="Поиск">
+                    </form>
+                </div>
                 <ul>
                     <li class="is--ml">
                         <button id="openMobileSearch"><svg class="svg-search-dims svg is--search">
@@ -123,11 +131,6 @@
                         </a>
                     </li>
                 </ul>
-                <div class="navbar__aside__btns__search">
-                    <form action="">
-                        <input type="text" placeholder="Поиск">
-                    </form>
-                </div>
             </div>
         </div>
     </div>
@@ -172,7 +175,7 @@
                 </div>
                 <div class="contacts__right">
                     <div class="contacts__form">
-                        <div class="contacts__form__inner">
+                        <form class="contacts__form__inner">
                             <div class="contacts__form__heading">Связь с администрацией</div>
                             <div class="form-fields">
                                 <div class="form-field is--w100">
@@ -180,7 +183,7 @@
                                     <label for="f_name">Ваше имя</label>
                                 </div>
                                 <div class="form-field is--w100">
-                                    <input type="text" name="f_email" id="f_email" placeholder="Почта" required>
+                                    <input type="email" name="f_email" id="f_email" placeholder="Почта" required>
                                     <label for="f_email">Ваш email</label>
                                 </div>
                                 <div class="form-field is--w100">
@@ -188,13 +191,13 @@
                                     <label for="f_text">Текст сообщения</label>
                                 </div>
                                 <div class="form-submit">
-                                    <div class="form-file">
+                                    <div class="form-file is--file-form">
                                         <input type="file" name="td_file" id="td_file">
                                         <label for="td_file">
                                             <svg class="svg-clip-dims svg is--clip">
                                                 <use xlink:href="img/svg/sprites.svg#clip"></use>
                                             </svg>
-                                            <span>Выберите файл</span>
+                                            <span class="is--label">Выберите файл</span>
                                         </label>
                                     </div>
                                     <button type="submit" class="btn">
@@ -207,7 +210,7 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -361,7 +364,7 @@
         </div>
     </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
-    <script src="dist/js/bundle-min.js"></script>
+    <script src="dist/js/bundle.js"></script>
     <script>
         svg4everybody();
     </script>

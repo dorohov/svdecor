@@ -8,7 +8,7 @@
                     <label for="td_name">Ваше имя</label>
                 </div>
                 <div class="form-field is--w50">
-                    <input type="text" name="td_phone" id="td_phone" required placeholder="Телефон" required>
+                    <input type="text" name="td_phone" id="td_phone" required placeholder="Телефон" class="input-phone" required>
                     <label for="td_phone">Номер телефона</label>
                 </div>
                 <div class="form-submit">
@@ -18,11 +18,11 @@
                         </span>
                         <span class="is--text">Запрос</span>
                     </button>
-                    <div class="form-file">
+                    <div class="form-file is--file-form">
                         <input type="file" name="td_file" id="td_file">
                         <label for="td_file">
                             @@include('../components/component.svg.html', {"name": "clip"})
-                            <span>Выберите файл</span>
+                            <span class="is--label">Выберите файл</span>
                         </label>
                     </div>
                 </div>
