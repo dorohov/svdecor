@@ -108,11 +108,12 @@
                                     </div>
                                 </div>
                                 <div class="item__main__features__btn">
-                                    @@include('../components/component.button.html', {
-                                        "type": "submit",
-                                        "icon": "next",
-                                        "text": "Выбор цвета"
-                                    })
+                                    <a href="#modal_picker" class="btn modal-open">
+                                        <span class="is--icon">
+                                            @@include('../components/component.svg.html', {"name": "next"})
+                                        </span>
+                                        <span class="is--text">Выбор цвета</span>
+                                    </a>
                                 </div>
                             </div>
                         </form>

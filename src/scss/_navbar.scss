@@ -362,6 +362,39 @@
             }
         }
     }
+    &__drop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        @include col(background, var(--main-bg), $main-bg);
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        &__inner {
+            padding-top: 50px;
+            display: flex;
+        }
+        &__right {
+            margin-left: auto;
+            ul {
+                li {
+                    a {
+                        font-weight: 450;
+                        font-size: 24px;
+                        line-height: 119.5%;
+                        @include col(color, var(--text-color), $text-color);
+                        display: block;
+                        padding: 10px 0;
+                        transition: .25s all ease;
+                        &:hover {
+                            color: $c-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 1440px) {

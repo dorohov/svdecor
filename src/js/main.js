@@ -84,7 +84,6 @@
             }
         }
 
-        console.log($('.is--file-form input[type="file"]'))
 
         $('.is--file-form input[type="file"]').change(function() {
             var filename = $(this).val().replace(/C:\\fakepath\\/i, '');

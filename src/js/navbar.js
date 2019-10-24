@@ -2,6 +2,10 @@
     "use strict"
     $(function() {
 
+        // 
+        // $('body').addClass('is--drop')
+        // 
+
         var isMoved = false;
         var items = document.querySelectorAll('.navbar__aside .is--ml');
         var isMoved = false;
@@ -72,6 +76,39 @@
             }
         }
 
+        function setPTDrop() {
+            $('.navbar__drop').css({
+                paddingTop: $('.navbar').innerHeight()
+            })
+        }
+        
+        var isScroll
+
+        function openDrop() { 
+            $('body').addClass('is--drop')
+
+            isScroll = $('.navbar.is--scroll')
+
+            $('.navbar').removeClass('is--scroll')
+            setTimeout(function() {
+                setPTDrop()
+            }, 100)
+        }
+
+        function closeDrop() {
+            $('body').removeClass('is--drop')
+
+            if(isScroll.length > 0) $('.navbar').addClass('is--scroll')
+        }
+
+        function toggleDrop() {
+            if($('body').hasClass('is--drop')) {
+                closeDrop()
+            }else {
+                openDrop()
+            }
+        }
+
         $('#openSearch').on('click', function() {
             openSearchPanel()
         })
@@ -96,6 +133,17 @@
 
         $(document).scroll(function() {
             setNavbarDefaultMode($(document).scrollTop())
+        })
+
+        $('.is--open-drop').on('click', function(e) {
+            e.preventDefault()  
+            toggleDrop()
+        })
+
+        setPTDrop()
+
+        $(window).resize(function() {
+            setPTDrop()
         })
         
     })

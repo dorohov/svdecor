@@ -13,3 +13,4 @@ openModal(modalID);
 #### IDs:
 
 - #modal_form - Форма
+- #modal_picker - Выбор цвета

@@ -13,17 +13,35 @@ body {
         .basket__total__heading {
             color: #0F0F0F;
         }
+        .navbar__drop__left img.is--white {
+            display: none;
+        }
     }
     &.is--dark {
         .basket__line__title__art,
         .basket__total__heading {
             color: #AFAFAF;
         } 
+        .navbar__drop__left img.is--dark {
+            display: none;
+        }
     }
     &.is--menu-open {
         overflow: hidden;
         .navbar {
             @include col(background, var(--main-bg), $main-bg);
+        }
+    }
+    &.is--drop {
+        overflow: hidden;
+        .navbar__drop {
+            display: block;
+        }
+        @media (max-width: 1200px) {
+            overflow: auto;
+            .navbar__drop {
+                display: none;
+            }
         }
     }
 }
@@ -143,6 +161,30 @@ input[type=number] {
         }
         &.is--light {
             font-weight: 300;
+        }
+    }
+}
+
+.to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 999;
+    button {
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        background: none;
+        transition: .25s all ease;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(50px);
+    }
+    &.is--show {
+        button {
+            transform: none;
+            opacity: 1;
+            visibility: visible;
         }
     }
 }

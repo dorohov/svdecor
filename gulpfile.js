@@ -153,7 +153,8 @@ function createBundleJs() {
                 './dist/js/i18n/ru.js',
                 './dist/js/imask.js',
                 './dist/js/main.js',
-                './dist/js/color_system.js'
+                './dist/js/color_system.js',
+                // './dist/js/pickr.min.js'
             ])
             .pipe(sourcemaps.init())
             .pipe(concat('bundle.js'))

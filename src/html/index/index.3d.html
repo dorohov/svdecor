@@ -10,11 +10,17 @@
                         вы найдете только лучшие люстры, бра, торшеры <br>
                         и другие светильники.</div>
                 </div>
+                <a href="#" class="btn is--ch">
+                    <span class="is--icon">
+                        @@include('../components/component.svg.html', {"name": "next"})
+                    </span>
+                    <span class="is--text">Другой цвет</span>
+                </a>
                 @@include('../components/component.button.html', {
                     "icon": "next",
-                    "text": "Другой цвет",
+                    "text": "Подробнее",
                     "type": "link",
-                    "href": "#"
+                    "href": "@@pages.production"
                 })
             </div>
             <div class="in-td__left__img">

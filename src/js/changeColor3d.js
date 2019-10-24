@@ -13,7 +13,7 @@
         
         $('.in-td__left__img img').attr('src', colors[current]);
 
-        $('.in-td__left__inner .btn').on('click', function(e) {
+        $('.in-td__left__inner .btn.is--ch').on('click', function(e) {
             e.preventDefault()
             if(current <= colors.length - 2) {
                 current++

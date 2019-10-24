@@ -222,7 +222,7 @@
                         &.is--active {
                             span {
                                 border-color: $c-primary;
-                                color: #fff !important;
+                                @include colImp(color, var(--text-color), $text-color);
                             }
                         }
                     }
@@ -364,6 +364,15 @@
             div.is--text {
                 color: #AFAFAF;
                 font-size: 18px;
+            }
+        }
+        &__color {
+            padding-right: 30px;
+            span {
+                width: 20px;
+                height: 20px;
+                display: block;
+                border-radius: 100%;
             }
         }
         &__right {

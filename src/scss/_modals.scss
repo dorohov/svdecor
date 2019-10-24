@@ -31,7 +31,7 @@
     vertical-align: middle;
     position: relative;
     z-index: 2;
-    max-width: 670px;
+    max-width: 810px;
     box-sizing: border-box;
     width: 90%;
     text-align: center;
@@ -42,9 +42,79 @@
     background-image: url(../../img/modal.png);
     background-position: center top;
     background-repeat: no-repeat;
+    &.is--picker {
+        background-image: none;
+    }
     &__heading {
         font-size: 36px;
         margin-bottom: 50px;
+    }
+    &__picker {
+        max-width: 670px;
+        width: 100%;
+        margin: 0 auto;
+        &__inner {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+            justify-content: center;
+        }
+        &__block {
+            max-width: 190px;
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 50px;
+            &__inner {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                transition: .25s all ease;
+                &:hover {
+                    transform: translateY(-5px) scale(1.05);
+                }
+            }
+            &__left {
+                margin-right: 15px;
+                span {
+                    width: 67px;
+                    height: 67px;
+                    display: block;
+                    border-radius: 100%;
+                }
+            }
+            &__right {
+                font-weight: 450;
+                font-size: 18px;
+            }
+        }
+        @media (max-width: 768px) {
+            &__block {
+                margin-bottom: 15px;
+                max-width: 50%;
+                &__left {
+                    span {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+    a[rel="modal:close"] {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        width: 22px;
+        height: 22px;
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACDSURBVHgBxdVRCoAgEATQpRN0lO7/YzfwSJPCfkXqusPQghDSPMotNQBXG6WN08jqhluX+UWvyuCOVrfKeyKFDw0GX2YzeDizg28/SCSQXrpZECCb/QXQ6ATn0QEeRg/7oyRLIWme5HOT/CA7gfC9mVdcZkA0BYq9eIpDczTdfUJymD7U96F0im0IxgAAAABJRU5ErkJggg==');
+        background-size: cover;
+        @media (max-width: 768px) {
+            top: 15px;
+            right: 15px;
+            width: 15px;
+            height: 15px;
+        }
     }
 }
 .modal-spinner {
