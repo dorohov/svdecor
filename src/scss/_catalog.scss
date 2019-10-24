@@ -105,8 +105,24 @@
                     position: relative;
                     z-index: 99;
                     cursor: pointer;
+                    width: 24px;
+                    height: 24px;
+                    border: 1px solid $c-primary;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:hover {
+                        svg {
+                            transform: rotate(360deg);
+                        }
+                    }
                     svg {
                         @include col(fill, var(--text-color), $text-color);
+                        width: 14px;
+                        height: 14px;
+                        transition: .5s all ease;
+                        transform-origin: center;
                     }
                 }
             }
@@ -158,7 +174,6 @@
             }
         }
         &__img {
-            padding: 0 15vw;
             a {
                 cursor: url(../../img/cursor.svg) 24 24, auto;
                 display: none;
@@ -199,10 +214,15 @@
                             padding: 13px 25px;
                             border-radius: 102px;
                             border: 3px solid transparent;
+                            transition: .25s all ease;
+                            &:hover {
+                                color: $c-primary;
+                            }
                         }
                         &.is--active {
                             span {
                                 border-color: $c-primary;
+                                color: #fff !important;
                             }
                         }
                     }
@@ -275,6 +295,9 @@
                                 transition: .25s all ease;
                                 display: inline-block;
                                 user-select: none;
+                                &:hover {
+                                    color: #fff;
+                                }
                             }
                             &.is--active {
                                 a {
@@ -383,8 +406,19 @@
                     cursor: pointer;
                     display: block;
                     padding: 0;
+                    &:hover {
+                        svg {
+                            fill: $c-primary;
+                        }
+                    }
+                    &:focus {
+                        svg {
+                            transform: scale(1.2);
+                        }
+                    }
                     svg {
                         @include col(fill, var(--text-color), $text-color);
+                        transition: .25s all ease;
                     }
                 }
             }
@@ -664,6 +698,7 @@
             &__img {
                 text-align: center;
                 margin-bottom: 50px;
+                padding: 0 15vw;
                 img {
                     margin: 0 auto;
                 }
