@@ -73,6 +73,17 @@
                 visibility: visible !important;
             }
         }
+        select {
+            width: 100%;
+            background: transparent;
+            padding: 10px 0 20px 0;
+            @include col(color, var(--form-field-text), $form-field-text);
+            border: 0;
+            @include colBorderImp(border-bottom, 1px, solid, var(--form-field), $form-field);
+            option {
+                color: #000;
+            }
+        }
     }
     &-submit {
         padding: 70px 23px 0 23px;
