@@ -460,6 +460,28 @@
 }
 
 @media (max-width: 768px) {
+    .dropdown {
+        &.is--open {
+            .dropdown__list {
+                transform: translateY(0);
+            }
+        }
+        &__list {
+            left: 0;
+            max-width: 80vw;
+            right: auto;
+            transform: translateY(10px);
+            &__inner {
+                ul {
+                    li {
+                        a {
+                            white-space: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .btn {
         padding: 15px 20px;
         border-width: 3px;

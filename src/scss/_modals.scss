@@ -31,9 +31,10 @@
     vertical-align: middle;
     position: relative;
     z-index: 2;
-    max-width: 810px;
     box-sizing: border-box;
     width: 90%;
+    max-width: 670px;
+
     text-align: center;
     box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.066);
     padding: 70px 40px 80px 40px;
@@ -42,6 +43,7 @@
     background-image: url(../../img/modal.png);
     background-position: center top;
     background-repeat: no-repeat;
+    background-size: cover;
     &.is--map {
         padding: 0;
     }
@@ -53,7 +55,6 @@
         margin-bottom: 50px;
     }
     &__picker {
-        max-width: 670px;
         width: 100%;
         margin: 0 auto;
         &__inner {
@@ -104,7 +105,7 @@
             }
         }
     }
-    a[rel="modal:close"] {
+    a.is--sq[rel="modal:close"] {
         position: absolute;
         right: 25px;
         top: 25px;

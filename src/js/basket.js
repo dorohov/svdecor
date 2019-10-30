@@ -29,7 +29,6 @@
             servicepath: 'http://frontend.dorohovdesign.ru/svdecor/service.php',
             hidedelt: true,
             onChoose: function(wat) {
-                console.log('сработало')
                 $('#f_delivery-a').val(wat.cityName + ', ' + wat.PVZ.Address);
                 $.modal.close();
             }

@@ -21,6 +21,8 @@ function openModal(modalID) {
             console.log(color);
         })
 
+        // openModal('#modal_form')
+
 
         // var pickr = Pickr.create({
         //     el: '.color_picker__inner',
