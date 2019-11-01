@@ -5,6 +5,9 @@
     width: 100%;
     z-index: 9999;
     transition: .25s all ease;
+    &.is--menu-open {
+        @include col(background, var(--main-bg), $main-bg);
+    }
     &.is--nnb {
         @include col(background, var(--main-bg), $main-bg);
     }

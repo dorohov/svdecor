@@ -48,13 +48,19 @@
         function openMobileMenu() {
             $('.navbar__mobile button').addClass('is-active')
             $('.navbar__aside').addClass('is--open')
-            $('body').addClass('is--menu-open')
+            $('.navbar').addClass('is--menu-open')
+            $('body').css({
+                overflow: 'hidden'
+            })
         }
 
         function closeMobileMenu() {
             $('.navbar__mobile button').removeClass('is-active')
             $('.navbar__aside').removeClass('is--open')
-            $('body').removeClass('is--menu-open')
+            $('.navbar').removeClass('is--menu-open')
+            $('body').css({
+                overflow: 'auto'
+            })
         }
 
         function toggleNavbar() {

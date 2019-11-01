@@ -21,7 +21,7 @@
         @include col(background, var(--contacts-right-bg), $contacts-right-bg);
         display: flex;
         align-items: center;
-        padding: 50px 30px 50px 130px;
+        padding: 140px 30px 50px 130px;
     }
     &__list {
         margin-bottom: 50px;
@@ -255,6 +255,7 @@
         }
         &__right {
             padding-left: 30px;
+            padding-top: 50px;
         }
         &__form {
             &__heading {

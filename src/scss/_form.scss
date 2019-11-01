@@ -226,6 +226,11 @@
     }
 }
 
+.form-file span.is--label {
+    white-space: normal;
+    max-width: 170px;
+}
+
 @media (max-width: 1025px) {
     .form {
         &-field {

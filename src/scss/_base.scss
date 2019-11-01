@@ -29,7 +29,7 @@ body {
     &.is--menu-open {
         overflow: hidden;
         .navbar {
-            @include col(background, var(--main-bg), $main-bg);
+            
         }
     }
     &.is--drop {
