@@ -20,19 +20,19 @@
 
         })  
 
-        var ourWidjet = new ISDEKWidjet ({
-            defaultCity: 'Москва',
-            cityFrom: 'Москва',
-            country: 'Россия',
-            link: 'modal-map__inner',
-            path: 'https://www.cdek.ru/website/edostavka/template/scripts/',
-            servicepath: 'http://frontend.dorohovdesign.ru/svdecor/service.php',
-            hidedelt: true,
-            onChoose: function(wat) {
-                $('#f_delivery-a').val(wat.cityName + ', ' + wat.PVZ.Address);
-                $.modal.close();
-            }
-        });
+        // var ourWidjet = new ISDEKWidjet ({
+        //     defaultCity: 'Москва',
+        //     cityFrom: 'Москва',
+        //     country: 'Россия',
+        //     link: 'modal-map__inner',
+        //     path: 'https://www.cdek.ru/website/edostavka/template/scripts/',
+        //     servicepath: 'http://frontend.dorohovdesign.ru/svdecor/service.php',
+        //     hidedelt: true,
+        //     onChoose: function(wat) {
+        //         $('#f_delivery-a').val(wat.cityName + ', ' + wat.PVZ.Address);
+        //         $.modal.close();
+        //     }
+        // });
 
         $('.modal__picker__block__inner').on('click', function() {
             var thisColor = $(this).data('color')
