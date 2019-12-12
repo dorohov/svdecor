@@ -162,6 +162,18 @@ input[type=number] {
         &.is--light {
             font-weight: 300;
         }
+        &.is--wt {
+            ol {
+                li {
+                    font-size: 18px;
+                    font-weight: 300;
+                    margin-bottom: 15px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
     }
 }
 

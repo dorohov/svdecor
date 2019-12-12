@@ -15,7 +15,7 @@
         }
     }
     &__menu {
-        margin-bottom: 55px;
+        margin-bottom: 40px;
         ul {
             display: flex;
             justify-content: center;
@@ -29,6 +29,20 @@
                     &:hover {
                         @include col(color, var(--text-color), $text-color);
                     }
+                }
+            }
+        }
+    }
+    &__logos {
+        margin-bottom: 50px;
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            li {
+                padding: 0 15px;
+                svg {
+                    @include col(fill, var(--text-color), $text-color);
                 }
             }
         }

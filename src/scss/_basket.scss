@@ -167,6 +167,12 @@
         .form-submit {
             padding-top: 30px;
         }
+        .form-file {
+            padding-left: 30px;
+            padding-right: 30px;
+            display: flex;
+            align-items: center;
+        }
     }
 }
 
@@ -259,6 +265,12 @@
         }
         &__form {
             &__heading {
+                margin-bottom: 30px;
+            }
+            .form-file {
+                padding-top: 0;
+                padding-left: 0;
+                padding-right: 0;
                 margin-bottom: 30px;
             }
         }

@@ -43,6 +43,15 @@
                 fill: $c-primary;
             }
         }
+        &__right {
+            &__title {
+                margin-bottom: 10px;
+            }
+            &__text {
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
     }
 }
 
