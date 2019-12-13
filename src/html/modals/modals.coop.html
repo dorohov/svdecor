@@ -1,0 +1,96 @@
+<div id="modal_coop" class="modal is--coop">
+    <div class="modal__coop">
+        <div class="modal__coop__heading">Получить условия сотрудничества</div>
+        <form class="modal__coop__form">
+            
+            <div class="modal__coop__form__row">
+                <div class="form-field is--w100">
+                    <input type="text" name="f_coop_fname" id="f_coop_fname" placeholder="Имя" required>
+                    <label for="f_coop_fname">Имя</label>
+                </div>
+            </div>
+
+            <div class="modal__coop__form__row">
+                <div class="form-field is--w100">
+                    <input type="text" name="f_coop_lname" id="f_coop_lname" placeholder="Фамилия">
+                    <label for="f_coop_lname">Фамилия</label>
+                </div>
+            </div>
+
+            <div class="modal__coop__form__row">
+                <div class="form-field is--w100">
+                    <input type="text" name="f_coop_phone" id="f_coop_phone" placeholder="Контактный телефон" required>
+                    <label for="f_coop_phone">Контактный телефон</label>
+                </div>
+            </div>
+
+            <div class="modal__coop__form__row">
+                <div class="form-field is--w100">
+                    <input type="text" name="f_coop_mail" id="f_coop_mail" placeholder="Электронная почта">
+                    <label for="f_coop_mail">Электронная почта</label>
+                </div>
+            </div>
+
+            <div class="modal__coop__form__row">
+                <div class="form-field is--w100">
+                    <input type="text" name="f_coop_site" id="f_coop_site" placeholder="Сайт">
+                    <label for="f_coop_site">Сайт</label>
+                </div>
+            </div>            
+
+            <div class="modal__coop__form__row">
+                <div class="form-field is--w100">
+                    <input type="text" name="f_coop_city" id="f_coop_city" placeholder="Город">
+                    <label for="f_coop_city">Город</label>
+                </div>
+            </div>
+
+            <div class="modal__coop__form__row">
+                <div class="form-checklist">
+                    <div class="form-checklist__title">
+                        Меня интересует
+                    </div>
+                    @@include('../simple/simple.form.checkrow.html', {
+                        "id": 1,
+                        "name": "f_coop_check",
+                        "text": "Дизайн - студия \\ Архитектурное бюро"
+                    })
+                    @@include('../simple/simple.form.checkrow.html', {
+                        "id": 2,
+                        "name": "f_coop_check",
+                        "text": "Торгующая организация"
+                    })
+                    @@include('../simple/simple.form.checkrow.html', {
+                        "id": 3,
+                        "name": "f_coop_check",
+                        "text": "Частный дизайнер \\ Архитектор"
+                    })
+                </div>
+            </div>
+
+            <div class="modal__coop__form__row">
+                <div class="form-textarea">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Дополнительная информация"></textarea>
+                </div>
+            </div>
+
+            <div class="modal__coop__form__row">
+                <div class="form-checkpol">
+                    <input type="checkbox" name="f_coop_checkpol" id="f_coop_checkpol" required>
+                    <label for="f_coop_checkpol" class="is--block"></label>
+                    <label for="f_coop_checkpol" class="is--text">Я согласен на E-mail - рассылку</label>
+                </div>
+            </div>
+
+            <div class="modal__coop__form__row">
+                <button type="submit" class="btn">
+                    <span class="is--icon">
+                        @@include('../components/component.svg.html', {"name": "next"})
+                    </span>
+                    <span class="is--text">Отправить</span>
+                </button>
+            </div>
+        
+        </form>
+    </div>
+</div>

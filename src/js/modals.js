@@ -21,7 +21,7 @@ function openModal(modalID) {
             console.log(color);
         })
 
-        // openModal('#modal_form')
+        openModal('#modal_coop')
 
 
         // var pickr = Pickr.create({

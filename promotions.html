@@ -2071,7 +2071,106 @@
     <div class="modal is--map" id="modal_map">
         <div id="modal-map__inner" style="width:100%; height:600px;"></div>
     </div>
+    <div id="modal_coop" class="modal is--coop">
+        <div class="modal__coop">
+            <div class="modal__coop__heading">Получить условия сотрудничества</div>
+            <form class="modal__coop__form">
+
+                <div class="modal__coop__form__row">
+                    <div class="form-field is--w100">
+                        <input type="text" name="f_coop_fname" id="f_coop_fname" placeholder="Имя" required>
+                        <label for="f_coop_fname">Имя</label>
+                    </div>
+                </div>
+
+                <div class="modal__coop__form__row">
+                    <div class="form-field is--w100">
+                        <input type="text" name="f_coop_lname" id="f_coop_lname" placeholder="Фамилия">
+                        <label for="f_coop_lname">Фамилия</label>
+                    </div>
+                </div>
+
+                <div class="modal__coop__form__row">
+                    <div class="form-field is--w100">
+                        <input type="text" name="f_coop_phone" id="f_coop_phone" placeholder="Контактный телефон" required>
+                        <label for="f_coop_phone">Контактный телефон</label>
+                    </div>
+                </div>
+
+                <div class="modal__coop__form__row">
+                    <div class="form-field is--w100">
+                        <input type="text" name="f_coop_mail" id="f_coop_mail" placeholder="Электронная почта">
+                        <label for="f_coop_mail">Электронная почта</label>
+                    </div>
+                </div>
+
+                <div class="modal__coop__form__row">
+                    <div class="form-field is--w100">
+                        <input type="text" name="f_coop_site" id="f_coop_site" placeholder="Сайт">
+                        <label for="f_coop_site">Сайт</label>
+                    </div>
+                </div>
+
+                <div class="modal__coop__form__row">
+                    <div class="form-field is--w100">
+                        <input type="text" name="f_coop_city" id="f_coop_city" placeholder="Город">
+                        <label for="f_coop_city">Город</label>
+                    </div>
+                </div>
+
+                <div class="modal__coop__form__row">
+                    <div class="form-checklist">
+                        <div class="form-checklist__title">
+                            Меня интересует
+                        </div>
+                        <div class="form-checklist__block">
+                            <input type="radio" name="f_coop_check" id="f_coop_check1" value="Дизайн - студия \ Архитектурное бюро" required>
+                            <label for="f_coop_check1" class="is--block"></label>
+                            <label for="f_coop_check1" class="is--text">Дизайн - студия \ Архитектурное бюро</label>
+                        </div>
+                        <div class="form-checklist__block">
+                            <input type="radio" name="f_coop_check" id="f_coop_check2" value="Торгующая организация" required>
+                            <label for="f_coop_check2" class="is--block"></label>
+                            <label for="f_coop_check2" class="is--text">Торгующая организация</label>
+                        </div>
+                        <div class="form-checklist__block">
+                            <input type="radio" name="f_coop_check" id="f_coop_check3" value="Частный дизайнер \ Архитектор" required>
+                            <label for="f_coop_check3" class="is--block"></label>
+                            <label for="f_coop_check3" class="is--text">Частный дизайнер \ Архитектор</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal__coop__form__row">
+                    <div class="form-textarea">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Дополнительная информация"></textarea>
+                    </div>
+                </div>
+
+                <div class="modal__coop__form__row">
+                    <div class="form-checkpol">
+                        <input type="checkbox" name="f_coop_checkpol" id="f_coop_checkpol" required>
+                        <label for="f_coop_checkpol" class="is--block"></label>
+                        <label for="f_coop_checkpol" class="is--text">Я согласен на E-mail - рассылку</label>
+                    </div>
+                </div>
+
+                <div class="modal__coop__form__row">
+                    <button type="submit" class="btn">
+                        <span class="is--icon">
+                            <svg class="svg-next-dims svg is--next">
+                                <use xlink:href="img/svg/sprites.svg#next"></use>
+                            </svg>
+                        </span>
+                        <span class="is--text">Отправить</span>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=127e0ca6-e6ff-462b-96c2-3e62bd5580d&lang=ru_RU" type="text/javascript"></script>
     <script src="dist/js/bundle.js"></script>
     <script>
         svg4everybody();

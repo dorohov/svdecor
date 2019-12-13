@@ -44,11 +44,47 @@
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
+    &__coop {
+        max-width: 390px;
+        width: 100%;
+        margin: 0 auto;
+        &__heading {
+            font-weight: 450;
+            font-size: 36px;
+            line-height: 112%;
+            margin-bottom: 60px;
+        }
+        &__form {
+            &__row {
+                margin-bottom: 40px;
+                position: relative;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .form-field {
+            padding-left: 0;
+            padding-right: 0;
+            margin-bottom: 0;
+        }
+    }
     &.is--map {
         padding: 0;
     }
-    &.is--picker {
+    &.is--picker,
+    &.is--coop {
         background-image: none;
+    }
+    &.is--coop {
+        @media (max-width: 768px) {
+            .modal__coop {
+                &__heading {
+                    font-size: 24px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
     }
     &__heading {
         font-size: 36px;
@@ -190,5 +226,11 @@
             font-size: 24px;
             margin-bottom: 30px;
         }
+    }
+}
+
+@media (max-width: 500px) {
+    .modal {
+        width: 100%;
     }
 }
