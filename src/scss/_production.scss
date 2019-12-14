@@ -21,6 +21,10 @@
     padding: 50px 0;
     @include colBorder(border-top, 1px, solid, var(--navbar-border-color), $navbar-border-color);
     @include colBorder(border-bottom, 1px, solid, var(--navbar-border-color), $navbar-border-color);
+    .btn {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 .production-stands {

@@ -20,9 +20,15 @@
         </div>
         @@include('../components/component.button.html', {
             "icon": "next",
-            "text": "сотрудничество",
+            "text": "Сотрудничество",
             "type": "link",
             "href": "@@pages.cooperation"
         })
+        <a href="#modal_coop" class="btn modal-open">
+            <span class="is--icon">
+                @@include('../components/component.svg.html', {"name": "next"})
+            </span>
+            <span class="is--text">Оставить заявку</span>
+        </a>
     </div>
 </div>
