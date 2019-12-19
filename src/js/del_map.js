@@ -12,7 +12,7 @@
             var myMap = new ymaps.Map("del_map", {
                     center: [52.924906, 36.574770],
                     zoom: 8,
-                    controls: []
+                    controls: ['searchControl']
                 })
         
                 if(places.length > 0) {
