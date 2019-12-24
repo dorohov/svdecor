@@ -27,9 +27,10 @@
             cityFrom: 'Москва',
             country: 'Россия',
             link: 'modal-map__inner',
-            apikey: '127e0ca6-e6ff-462b-96c2-3e62bd5580df',
-            path: sitepath + 'dist/widget/scripts/',
-            servicepath: sitepath + 'dist/widget/scripts/service.php',
+            apikey: '1c449b01-b7de-454b-9849-645f57cc73a2',
+            path: 'https://svdecor.pro/wd/scripts/',
+            servicepath: 'https://svdecor.pro/wd/scripts/service.php',
+            templatepath: 'https://svdecor.pro/wd/scripts/template.php',
             hidedelt: true,
             onChoose: function(wat) {
                 $('#f_delivery-a').val(wat.cityName + ', ' + wat.PVZ.Address);
