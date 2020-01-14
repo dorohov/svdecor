@@ -89,6 +89,26 @@
             var filename = $(this).val().replace(/C:\\fakepath\\/i, '');
             $(this).parent().find('.is--label').html(filename)
        });
+
+       $('.photolist__inner').slick({
+           slidesToShow: 3,
+           prevArrow: '.photolist button.is--prev',
+           nextArrow: '.photolist button.is--next',
+           responsive: [
+               {
+                   breakpoint: 1024,
+                   settings: {
+                       slidesToShow: 2
+                   }
+               },
+               {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+           ]
+       })
         
     })
 })(jQuery);

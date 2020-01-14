@@ -6,6 +6,23 @@
     margin: 0 auto;
 }
 
+.content {
+    h1 {
+        font-size: 36px;
+        font-weight: 500;
+        margin-bottom: 25px;
+    }
+    h2 {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 112.5%;
+        margin: 0 0 20px;
+    }
+}
+
 .message {
     position: absolute;
     @include col(background-color, var(--text-color), $text-color);
@@ -91,7 +108,7 @@
 .btn {
     display: inline-flex;
     align-items: center;
-    padding: 25px 33px;
+    padding: 15px 25px;
     position: relative;
     border: 4px solid $c-primary;
     border-radius: 50px;
@@ -398,15 +415,56 @@
 }
 
 .photolist {
+    position: relative;
+    button {
+        position: absolute;
+        width: 43px;
+        height: 43px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(325.1deg, #7B5F54 4.3%, #5B433F 85.02%), #FFFFFF;
+        border-radius: 100%;
+        top: 50%;
+        margin-top: -21px;
+        cursor: pointer;
+        z-index: 10;
+        &.is--prev {
+            left: 0;
+        }
+        &.is--next {
+            right: 0;
+            transform: rotate(180deg);
+        }
+        img {
+            max-width: 23px;
+        }
+        @media (max-width: 768px) {
+            &.is--prev {
+                left: 15px;
+            }
+            &.is--next {
+                right: 15px;
+            }
+        }
+    }
     &__inner {
         display: flex;
         margin: 0 -15px;
         flex-wrap: wrap;
+        padding: 0 70px;
+        @media (max-width: 768px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
     &__block {
         max-width: 33.33333333%;
         width: 100%;
-        padding: 0 15px;
+        padding: 15px;
         &__inner {
             overflow: hidden;
         }

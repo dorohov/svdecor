@@ -4,7 +4,13 @@
         display: flex;
         align-items: center;
         .heading {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            &__text {
+                font-size: 50px;
+                @media (max-width: 768px) {
+                    font-size: 30px;
+                }
+            }
         }
         &__left {
             display: flex;
@@ -78,6 +84,7 @@
             display: block;
             @include col(background, var(--catalog-card-bg), $catalog-card-bg);
             transition: .25s all ease;
+            height: 100%;
             &:hover {
                 @include col(background, var(--catalog-card-bg-hover), $catalog-card-bg-hover);
             }
@@ -147,8 +154,14 @@
                 font-size: 18px;
                 margin-bottom: 10px;
             }
+            &__price {
+                @include col(color, var(--text-color), $text-color);
+                font-weight: 600;
+                font-size: 22px;
+            }
             &__art {
                 @include col(color, var(--footer-text), $footer-text);
+                margin-bottom: 15px;
             }
         }
     }
@@ -161,6 +174,20 @@
         padding-top: 100px;
     }
     &__main {
+        &__desc {
+            &__content {
+                &__icons {
+                    display: flex;
+                    margin: 0 -15px;
+                    padding-top: 60px;
+                    img {
+                        max-width: 100px;
+                        margin: 0 15px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
         display: flex;
         justify-content: space-between;
         padding-bottom: 75px;
@@ -390,7 +417,7 @@
         &__count {
             margin-left: 5vw;
             &__inner {
-                padding: 25px 33px;
+                padding: 15px 25px;
                 position: relative;
                 border: 4px solid $c-primary;
                 border-radius: 50px;
@@ -451,6 +478,7 @@
     &__right {
         display: flex;
         width: 100%;
+        align-items: flex-start;
     }
     &__rightt {
         display: flex;
@@ -475,6 +503,8 @@
         width: 100%;
         justify-content: space-between;
         &__block {
+            max-width: 33.333333333%;
+            width: 100%;
             &__heading {
                 font-size: 24px;
                 margin-bottom: 25px;
@@ -971,6 +1001,13 @@
     .catalog {
         &__block {
             max-width: 100%;
+        }
+    }
+    .item__main__desc__content__icons {
+        margin: 0;
+        img {
+            max-width: 33.33333%;
+            margin: 0;
         }
     }
 }

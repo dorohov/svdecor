@@ -346,6 +346,7 @@
     }
     &__left {
         margin-right: 30px;
+        max-width: 380px;
         .heading {
             margin-bottom: 50px;
         }
@@ -422,6 +423,13 @@
 }
 
 @media (max-width: 1440px) {
+    .in-production {
+        &__left {
+            br {
+                display: none;
+            }
+        }
+    }
     .banner {
         &__footer {
             min-height: 150px;
