@@ -29,6 +29,11 @@
         }
     }
     &.is--scroll {
+        li.is--iehide {
+            svg {
+                fill: #fff !important;
+            }
+        }
         @include col(background, var(--main-bg), $main-bg);
         @include colBorderImp(border-bottom, 1px, solid, var(--navbar-border-color), $navbar-border-color);
         .navbar {
@@ -41,6 +46,22 @@
             }
             &__inner {
                 height: 100px;
+            }
+            &__menu {
+                ul {
+                    li {
+                        &.is--c-dropdown,
+                        &.menu-item-has-children {
+                            ul {
+                                li {
+                                    a {
+                                        @include colImp(color, var(--main-bg), $main-bg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         .navbar__menu ul li a {
@@ -222,6 +243,7 @@
         position: absolute;
         .iconset {
             display: flex;
+            align-items: center;
             li {
                 position: relative;
                 a,
@@ -487,6 +509,57 @@
         }
         &__aside {
             display: flex;
+        }
+    }
+}
+
+li.is--iehide {
+    button {
+        padding: 4px !important;
+        border: 1px solid $c-primary !important;
+        border-radius: 50px;
+        width: 70px;
+        min-width: 70px;
+        display: flex;
+        height: 36px;
+        position: relative;
+        &::after {
+            content: 'Off';
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            margin-top: -7px;
+            @include col(color, var(--text-color), $text-color);
+            font-size: 14px;
+            z-index: -1;
+        }
+        svg {
+            width: 26px;
+            height: 26px;
+            background: $c-primary;
+            padding: 4px;
+            border-radius: 100%;
+            fill: #fff !important;
+            position: absolute;
+            top: 4px;
+            left: 38px;
+            transition: .25s all ease;
+        }
+    }
+}
+
+body {
+    &.is--white {
+        li.is--iehide {
+            button {
+                svg {
+                    left: 4px;
+                }
+                &::after {
+                    content: 'On';
+                    left: 35px;
+                }
+            }
         }
     }
 }
